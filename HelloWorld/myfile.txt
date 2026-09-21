@@ -1,0 +1,3 @@
+Hello from David Mellor
+This is CS526
+This is my first assignment
