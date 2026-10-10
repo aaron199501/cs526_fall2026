@@ -1,0 +1,12 @@
+# Delete: by value, by index, and a value that is not in the list.
+
+# Setup: the list problem2_update.txt ends with
+append 1
+append 12
+append 100
+append 3
+append 5
+
+delete 100
+delete_at 0
+delete 42

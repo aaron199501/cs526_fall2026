@@ -1,0 +1,10 @@
+# Empty lists, deleting the only node, and reusing the list.
+print_list
+len
+append 4
+delete 4
+print_list
+append 9
+delete_at 0
+len
+print_list

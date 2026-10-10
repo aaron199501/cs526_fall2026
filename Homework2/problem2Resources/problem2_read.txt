@@ -1,0 +1,13 @@
+# Read: get, find, and len.
+
+# Setup: the list problem2_create.txt ends with
+append 1
+append 12
+append 99
+append 3
+append 5
+
+get 2
+find 5
+find 42
+len

@@ -1,0 +1,11 @@
+# Errors: each prints a warning and the driver keeps going.
+
+# Setup: the list problem2_delete.txt ends with
+append 12
+append 3
+append 5
+
+get 10
+insert x 4
+update 1
+remove 3

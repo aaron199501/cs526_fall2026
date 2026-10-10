@@ -1,0 +1,7 @@
+# Create: append, prepend, and insert, starting from an empty list.
+append 12
+append 3
+append 5
+prepend 1
+insert 2 99
+print_list
