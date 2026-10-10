@@ -1,0 +1,10 @@
+x
+xy
+xyz
+xyzy
+y
+yz
+yzy
+z
+zy
+9
