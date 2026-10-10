@@ -25,7 +25,6 @@ input file.
 | `tests/record_runs.py` | Runs and verifies the programs; optionally serves a local execution viewer |
 | `tests/data/` | Saved automated-test inputs and expected-output fixtures |
 | `screenshot/` | Six representative VS Code terminal screenshots: Problems 1-3, two Problem 4 outcomes, and the automated tests |
-| `Homework3.txt` | Original assignment requirements |
 
 ## Files and repository layout
 
@@ -36,7 +35,6 @@ in your Git repository. A suitable repository layout is:
 <your-repository>/
 `-- Homework3/
     |-- .gitignore
-    |-- Homework3.txt
     |-- README.md
     |-- palindrome.py
     |-- palindrome_input.txt
