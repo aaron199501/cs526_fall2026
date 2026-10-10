@@ -9,6 +9,12 @@ substrings, recursive in-place reversal of three stack implementations, and
 intersection checking for fixed Ghostbuster/ghost pairs. The programs use only
 the Python standard library and require Python 3.9 or later.
 
+The submission includes all 29 inputs and all 28 expected-output files supplied
+by the instructor. Every supplied expected output matches the corresponding
+program output. The remaining input, `palendrome_4S.txt`, has no answer file in
+the supplied resources; it is checked against an independent palindrome
+reference instead. Actual executions are saved as text and browser screenshots.
+
 Problems 1, 2, and 4 read standard input. Problem 3 follows the assignment's
 instruction to push the numbers 1 through 10 onto each stack and requires no
 input file.
@@ -21,10 +27,14 @@ input file.
 | `substrings_input.txt` | Problem 2 sample input |
 | `stacks.py` | Problem 3 |
 | `ghostbusters.py` | Problem 4 |
-| `tests/test_homework.py` | Automated correctness, structure, and output tests |
-| `tests/record_runs.py` | Runs and verifies the programs; optionally serves a local execution viewer |
-| `tests/data/` | Saved automated-test inputs and expected-output fixtures |
-| `screenshot/` | Six representative VS Code terminal screenshots: Problems 1-3, two Problem 4 outcomes, and the automated tests |
+| `tests/test_homework.py` | Original correctness, structure, and output tests |
+| `tests/test_teacher_examples.py` | Regression tests for all 29 instructor inputs |
+| `tests/teacher_cases.py` | Maps instructor inputs to programs and answers; independently checks the input with no supplied answer |
+| `tests/record_runs.py` | Runs and verifies the programs, exports actual execution transcripts, and optionally serves a local execution viewer |
+| `tests/data/` | Original automated-test inputs and expected-output fixtures |
+| `tests/teacher_resources/` | All 58 instructor files, preserving their original contents and names |
+| `example_executions/` | Actual commands, outputs, and comparison results for all 29 instructor inputs, the stack demonstration, and the expanded test suite |
+| `screenshot/` | Screenshots of all 29 instructor-input executions, fresh stack and test executions, and six retained terminal examples |
 
 ## Files and repository layout
 
@@ -45,11 +55,26 @@ in your Git repository. A suitable repository layout is:
     |-- tests/
     |   |-- __init__.py
     |   |-- test_homework.py
+    |   |-- test_teacher_examples.py
+    |   |-- teacher_cases.py
     |   |-- record_runs.py
-    |   `-- data/
-    |       |-- *_input.txt
-    |       `-- *_expected.txt
+    |   |-- data/
+    |   |   |-- *_input.txt
+    |   |   `-- *_expected.txt
+    |   `-- teacher_resources/
+    |       |-- Homework3.txt
+    |       |-- palendrome_*.txt
+    |       |-- palendrome_ans_*.txt
+    |       |-- unique_substrings_input_*.txt
+    |       |-- unique_substrings_ans_*.txt
+    |       |-- ghostbusters_input_*.txt
+    |       `-- ghostbusters_ans_*.txt
+    |-- example_executions/
+    |   `-- *.txt
     `-- screenshot/
+        |-- teacher_*.jpg
+        |-- p3_stacks.jpg
+        |-- tests_unittest.jpg
         |-- p1_sample.png
         |-- p2_sample.png
         |-- p3_stacks.png
@@ -58,8 +83,10 @@ in your Git repository. A suitable repository layout is:
         `-- tests_unittest.png
 ```
 
-The four source programs and the two sample input files are at the homework
-root. All automated tests and their input/output fixtures remain in `tests/`.
+The four source programs and the two original sample input files are at the
+homework root. All automated tests and their input/output fixtures remain in
+`tests/`. The instructor's spelling `palendrome` is preserved in the resource
+filenames; the Problem 1 program is named `palindrome.py`.
 The assignment's Code, README, Test files, and Example executions labels
 describe required contents; they do not require folders with those names.
 
@@ -177,9 +204,21 @@ differences; very large integers also incur bit-operation costs.
 - The tests cover saved input/output fixtures, exhaustive short-string cases,
   stack edge cases, and 1,000 reproducible geometry comparisons against an
   independent pairwise determinant algorithm with random seed 526.
-- Six representative example executions are provided as VS Code integrated-terminal
-  PNG screenshots in `screenshot/`. All test scripts, input files, and expected
-  output files are retained, including cases without individual screenshots.
+- Instructor resources cover 15 palindrome inputs, three substring inputs, and
+  11 Ghostbuster inputs. Problem 3 has no instructor input file because its
+  required input is the fixed sequence 1 through 10.
+- Output comparison checks every line. It treats Windows CRLF and Unix LF as
+  equivalent and allows one optional final newline; it does not ignore spaces,
+  capitalization, or extra output lines.
+- `palendrome_ans_4S.txt` was not supplied. The independent reference compares
+  characters from both ends after removing literal spaces. This case produces
+  ten Boolean results and a final palindrome count of 4. Its transcript and
+  screenshot explicitly identify this independent check.
+- All 29 instructor-input executions have individual screenshots in
+  `screenshot/`. The JPEG files are captures of the local execution viewer
+  displaying real subprocess output. Six original VS Code terminal PNG files
+  are retained as earlier examples; the old test PNG shows the earlier
+  32-test suite, while the fresh JPEG shows the expanded suite.
 
 ## How to run
 
@@ -217,9 +256,31 @@ Get-Content .\tests\data\p4_example4_input.txt | py -B .\ghostbusters.py
 Replace `py` with `python` if that is your installed Python command. Other saved input
 cases can be run by substituting their matching files from `tests/data/`.
 
+### Instructor inputs
+
+Run an individual instructor case by selecting its input file. For example:
+
+```sh
+python3 -B palindrome.py < tests/teacher_resources/palendrome_0.txt
+python3 -B substrings.py < tests/teacher_resources/unique_substrings_input_0.txt
+python3 -B ghostbusters.py < tests/teacher_resources/ghostbusters_input_0.txt
+```
+
+On Windows PowerShell:
+
+```powershell
+Get-Content .\tests\teacher_resources\palendrome_0.txt | py -B .\palindrome.py
+Get-Content .\tests\teacher_resources\unique_substrings_input_0.txt | py -B .\substrings.py
+Get-Content .\tests\teacher_resources\ghostbusters_input_0.txt | py -B .\ghostbusters.py
+```
+
+Substitute any input linked in the tables below to run another case. The
+automated commands in the next section run every instructor case together.
+
 ### Automated tests
 
-The suite runs all saved cases and additional algorithm and structure checks:
+The suite runs all original cases, all 29 instructor inputs, and the algorithm
+and structure checks:
 
 ```sh
 python3 -B -m unittest discover -s tests -v
@@ -232,9 +293,9 @@ py -B -m unittest discover -s tests -v
 ```
 
 The `-B` option keeps bytecode cache files out of the submission folder.
-Actual VS Code integrated-terminal screenshots are in `screenshot/`.
 
-To run and verify every saved execution without starting the optional viewer:
+To run and verify all 48 saved executions, including the complete test suite,
+without starting the optional viewer:
 
 ```sh
 python3 -B tests/record_runs.py --verify-only
@@ -246,7 +307,83 @@ On Windows PowerShell:
 py -B .\tests\record_runs.py --verify-only
 ```
 
-### Execution screenshots
+To regenerate the 31 actual execution transcripts in `example_executions/`:
+
+```sh
+python3 -B tests/record_runs.py --export --verify-only
+```
+
+On Windows PowerShell:
+
+```powershell
+py -B .\tests\record_runs.py --export --verify-only
+```
+
+Each transcript records the command, input, actual output, and comparison
+result. The recorded commands use Linux/macOS redirection syntax; use the
+PowerShell equivalents above on Windows. Exporting reruns the programs and
+updates the transcripts. Screenshots are captured separately from the viewer.
+
+### Instructor example executions
+
+All 28 cases with supplied answers passed comparison. The remaining case
+passed the independent reference check. Each row links to the original input,
+its expected output when supplied, the actual execution, and its screenshot.
+
+#### Problem 1
+
+| Input | Instructor answer | Actual execution | Screenshot |
+| --- | --- | --- | --- |
+| [palendrome_0.txt](tests/teacher_resources/palendrome_0.txt) | [Answer](tests/teacher_resources/palendrome_ans_0.txt) | [Run](example_executions/teacher_palendrome_0.txt) | [Image](screenshot/teacher_palendrome_0.jpg) |
+| [palendrome_0L.txt](tests/teacher_resources/palendrome_0L.txt) | [Answer](tests/teacher_resources/palendrome_ans_0L.txt) | [Run](example_executions/teacher_palendrome_0L.txt) | [Image](screenshot/teacher_palendrome_0L.jpg) |
+| [palendrome_0S.txt](tests/teacher_resources/palendrome_0S.txt) | [Answer](tests/teacher_resources/palendrome_ans_0S.txt) | [Run](example_executions/teacher_palendrome_0S.txt) | [Image](screenshot/teacher_palendrome_0S.jpg) |
+| [palendrome_1.txt](tests/teacher_resources/palendrome_1.txt) | [Answer](tests/teacher_resources/palendrome_ans_1.txt) | [Run](example_executions/teacher_palendrome_1.txt) | [Image](screenshot/teacher_palendrome_1.jpg) |
+| [palendrome_1L.txt](tests/teacher_resources/palendrome_1L.txt) | [Answer](tests/teacher_resources/palendrome_ans_1L.txt) | [Run](example_executions/teacher_palendrome_1L.txt) | [Image](screenshot/teacher_palendrome_1L.jpg) |
+| [palendrome_1S.txt](tests/teacher_resources/palendrome_1S.txt) | [Answer](tests/teacher_resources/palendrome_ans_1S.txt) | [Run](example_executions/teacher_palendrome_1S.txt) | [Image](screenshot/teacher_palendrome_1S.jpg) |
+| [palendrome_2.txt](tests/teacher_resources/palendrome_2.txt) | [Answer](tests/teacher_resources/palendrome_ans_2.txt) | [Run](example_executions/teacher_palendrome_2.txt) | [Image](screenshot/teacher_palendrome_2.jpg) |
+| [palendrome_2L.txt](tests/teacher_resources/palendrome_2L.txt) | [Answer](tests/teacher_resources/palendrome_ans_2L.txt) | [Run](example_executions/teacher_palendrome_2L.txt) | [Image](screenshot/teacher_palendrome_2L.jpg) |
+| [palendrome_2S.txt](tests/teacher_resources/palendrome_2S.txt) | [Answer](tests/teacher_resources/palendrome_ans_2S.txt) | [Run](example_executions/teacher_palendrome_2S.txt) | [Image](screenshot/teacher_palendrome_2S.jpg) |
+| [palendrome_3.txt](tests/teacher_resources/palendrome_3.txt) | [Answer](tests/teacher_resources/palendrome_ans_3.txt) | [Run](example_executions/teacher_palendrome_3.txt) | [Image](screenshot/teacher_palendrome_3.jpg) |
+| [palendrome_3L.txt](tests/teacher_resources/palendrome_3L.txt) | [Answer](tests/teacher_resources/palendrome_ans_3L.txt) | [Run](example_executions/teacher_palendrome_3L.txt) | [Image](screenshot/teacher_palendrome_3L.jpg) |
+| [palendrome_3S.txt](tests/teacher_resources/palendrome_3S.txt) | [Answer](tests/teacher_resources/palendrome_ans_3S.txt) | [Run](example_executions/teacher_palendrome_3S.txt) | [Image](screenshot/teacher_palendrome_3S.jpg) |
+| [palendrome_4.txt](tests/teacher_resources/palendrome_4.txt) | [Answer](tests/teacher_resources/palendrome_ans_4.txt) | [Run](example_executions/teacher_palendrome_4.txt) | [Image](screenshot/teacher_palendrome_4.jpg) |
+| [palendrome_4L.txt](tests/teacher_resources/palendrome_4L.txt) | [Answer](tests/teacher_resources/palendrome_ans_4L.txt) | [Run](example_executions/teacher_palendrome_4L.txt) | [Image](screenshot/teacher_palendrome_4L.jpg) |
+| [palendrome_4S.txt](tests/teacher_resources/palendrome_4S.txt) | Not supplied; independent reference | [Run](example_executions/teacher_palendrome_4S.txt) | [Image](screenshot/teacher_palendrome_4S.jpg) |
+
+#### Problem 2
+
+| Input | Instructor answer | Actual execution | Screenshot |
+| --- | --- | --- | --- |
+| [unique_substrings_input_0.txt](tests/teacher_resources/unique_substrings_input_0.txt) | [Answer](tests/teacher_resources/unique_substrings_ans_0.txt) | [Run](example_executions/teacher_unique_substrings_input_0.txt) | [Image](screenshot/teacher_unique_substrings_input_0.jpg) |
+| [unique_substrings_input_1.txt](tests/teacher_resources/unique_substrings_input_1.txt) | [Answer](tests/teacher_resources/unique_substrings_ans_1.txt) | [Run](example_executions/teacher_unique_substrings_input_1.txt) | [Image](screenshot/teacher_unique_substrings_input_1.jpg) |
+| [unique_substrings_input_2.txt](tests/teacher_resources/unique_substrings_input_2.txt) | [Answer](tests/teacher_resources/unique_substrings_ans_2.txt) | [Run](example_executions/teacher_unique_substrings_input_2.txt) | [Image](screenshot/teacher_unique_substrings_input_2.jpg) |
+
+#### Problem 3
+
+The fixed stack demonstration is included as a [text execution](example_executions/p3_stacks.txt)
+and a [fresh screenshot](screenshot/p3_stacks.jpg). It shows all three stack
+implementations before and after reversing the numbers 1 through 10.
+
+#### Problem 4
+
+| Input | Instructor answer | Actual execution | Screenshot |
+| --- | --- | --- | --- |
+| [ghostbusters_input_0.txt](tests/teacher_resources/ghostbusters_input_0.txt) | [Answer](tests/teacher_resources/ghostbusters_ans_0.txt) | [Run](example_executions/teacher_ghostbusters_input_0.txt) | [Image](screenshot/teacher_ghostbusters_input_0.jpg) |
+| [ghostbusters_input_1.txt](tests/teacher_resources/ghostbusters_input_1.txt) | [Answer](tests/teacher_resources/ghostbusters_ans_1.txt) | [Run](example_executions/teacher_ghostbusters_input_1.txt) | [Image](screenshot/teacher_ghostbusters_input_1.jpg) |
+| [ghostbusters_input_2.txt](tests/teacher_resources/ghostbusters_input_2.txt) | [Answer](tests/teacher_resources/ghostbusters_ans_2.txt) | [Run](example_executions/teacher_ghostbusters_input_2.txt) | [Image](screenshot/teacher_ghostbusters_input_2.jpg) |
+| [ghostbusters_input_3.txt](tests/teacher_resources/ghostbusters_input_3.txt) | [Answer](tests/teacher_resources/ghostbusters_ans_3.txt) | [Run](example_executions/teacher_ghostbusters_input_3.txt) | [Image](screenshot/teacher_ghostbusters_input_3.jpg) |
+| [ghostbusters_input_4.txt](tests/teacher_resources/ghostbusters_input_4.txt) | [Answer](tests/teacher_resources/ghostbusters_ans_4.txt) | [Run](example_executions/teacher_ghostbusters_input_4.txt) | [Image](screenshot/teacher_ghostbusters_input_4.jpg) |
+| [ghostbusters_input_5.txt](tests/teacher_resources/ghostbusters_input_5.txt) | [Answer](tests/teacher_resources/ghostbusters_ans_5.txt) | [Run](example_executions/teacher_ghostbusters_input_5.txt) | [Image](screenshot/teacher_ghostbusters_input_5.jpg) |
+| [ghostbusters_input_6.txt](tests/teacher_resources/ghostbusters_input_6.txt) | [Answer](tests/teacher_resources/ghostbusters_ans_6.txt) | [Run](example_executions/teacher_ghostbusters_input_6.txt) | [Image](screenshot/teacher_ghostbusters_input_6.jpg) |
+| [ghostbusters_input_7.txt](tests/teacher_resources/ghostbusters_input_7.txt) | [Answer](tests/teacher_resources/ghostbusters_ans_7.txt) | [Run](example_executions/teacher_ghostbusters_input_7.txt) | [Image](screenshot/teacher_ghostbusters_input_7.jpg) |
+| [ghostbusters_input_8.txt](tests/teacher_resources/ghostbusters_input_8.txt) | [Answer](tests/teacher_resources/ghostbusters_ans_8.txt) | [Run](example_executions/teacher_ghostbusters_input_8.txt) | [Image](screenshot/teacher_ghostbusters_input_8.jpg) |
+| [ghostbusters_input_9.txt](tests/teacher_resources/ghostbusters_input_9.txt) | [Answer](tests/teacher_resources/ghostbusters_ans_9.txt) | [Run](example_executions/teacher_ghostbusters_input_9.txt) | [Image](screenshot/teacher_ghostbusters_input_9.jpg) |
+| [ghostbusters_input_10.txt](tests/teacher_resources/ghostbusters_input_10.txt) | [Answer](tests/teacher_resources/ghostbusters_ans_10.txt) | [Run](example_executions/teacher_ghostbusters_input_10.txt) | [Image](screenshot/teacher_ghostbusters_input_10.jpg) |
+
+The expanded automated test run is included as a [text execution](example_executions/tests_unittest.txt)
+and a [fresh screenshot](screenshot/tests_unittest.jpg).
+
+### Retained terminal examples
 
 | Program | Screenshot |
 | --- | --- |
@@ -255,22 +392,31 @@ py -B .\tests\record_runs.py --verify-only
 | Problem 3 | [All three stacks](screenshot/p3_stacks.png) |
 | Problem 4: ghosts were not eliminated | [Example 1](screenshot/p4_example1.png) |
 | Problem 4: ghosts were eliminated | [Example 2](screenshot/p4_example2.png) |
-| Automated tests | [Full test execution](screenshot/tests_unittest.png) |
+| Earlier automated tests | [Original 32-test execution](screenshot/tests_unittest.png) |
 
-The six supplied PNG files show the execution commands and outputs in the VS Code integrated terminal. The screenshots use the equivalent saved samples in `tests/data/`, which remain available. All test cases are retained in the root sample files and `tests/`; individual screenshots are provided for representative examples.
-To optionally rerun all cases and open the local execution viewer:
+These six PNG files show earlier commands and outputs in the VS Code integrated
+terminal. Their corresponding original input files remain available. The fresh
+JPEG captures and text executions above show the instructor inputs and the
+expanded tests.
+
+### Local execution viewer
+
+To rerun all cases and open the local execution viewer:
 
 ```sh
 python3 -B tests/record_runs.py
 ```
 
 On Windows, replace `python3` with `py` or `python`. Open
-`http://127.0.0.1:8765/` in a browser. Press Ctrl+C to stop the viewer. The helper keeps actual output in
-memory and writes no result text files.
+`http://127.0.0.1:8765/` in a browser. Each page displays a real captured
+execution, its input, actual output, and verification result. Press Ctrl+C to
+stop the viewer. Without `--export`, the helper keeps results in memory and
+writes no execution text files.
 
 ### Repository submission
 
 Place this entire `Homework3/` folder in your Git repository, commit it, and
 push it. Keeping the folder name satisfies the assignment's folder option.
-Confirm that the source files, sample input files, README, `tests/`, and `screenshot/` are visible
-in the repository, then submit the repository link on Brightspace.
+Confirm that the source files, sample input files, README, `tests/`,
+`example_executions/`, and `screenshot/` are visible in the repository, then
+submit the repository link on Brightspace.
