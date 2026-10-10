@@ -13,7 +13,7 @@ The submission includes all 29 inputs and all 28 expected-output files supplied
 by the instructor. Every supplied expected output matches the corresponding
 program output. The remaining input, `palendrome_4S.txt`, has no answer file in
 the supplied resources; it is checked against an independent palindrome
-reference instead. Actual executions are saved as text and browser screenshots.
+reference instead. Actual executions are saved as text transcripts and VS Code integrated terminal screenshots.
 
 Problems 1, 2, and 4 read standard input. Problem 3 follows the assignment's
 instruction to push the numbers 1 through 10 onto each stack and requires no
@@ -34,7 +34,7 @@ input file.
 | `tests/data/` | Original automated-test inputs and expected-output fixtures |
 | `tests/teacher_resources/` | All 58 instructor files, preserving their original contents and names |
 | `example_executions/` | Actual commands, outputs, and comparison results for all 29 instructor inputs, the stack demonstration, and the expanded test suite |
-| `screenshot/` | Screenshots of all 29 instructor-input executions, fresh stack and test executions, and six retained terminal examples |
+| `screenshot/` | 37 VS Code integrated terminal screenshots covering all 29 instructor inputs, stack and test executions, and six additional sample/test views |
 
 ## Files and repository layout
 
@@ -214,11 +214,11 @@ differences; very large integers also incur bit-operation costs.
   characters from both ends after removing literal spaces. This case produces
   ten Boolean results and a final palindrome count of 4. Its transcript and
   screenshot explicitly identify this independent check.
-- All 29 instructor-input executions have individual screenshots in
-  `screenshot/`. The JPEG files are captures of the local execution viewer
-  displaying real subprocess output. Six original VS Code terminal PNG files
-  are retained as earlier examples; the old test PNG shows the earlier
-  32-test suite, while the fresh JPEG shows the expanded suite.
+- All 37 screenshots in `screenshot/` were captured from the VS Code
+  integrated terminal using actual Python executions. They cover all 29
+  instructor-input cases, the stack demonstration, the expanded 33-test suite,
+  and six additional sample/test views. Both the PNG and JPEG test screenshots
+  show the current 33-test suite.
 
 ## How to run
 
@@ -322,7 +322,9 @@ py -B .\tests\record_runs.py --export --verify-only
 Each transcript records the command, input, actual output, and comparison
 result. The recorded commands use Linux/macOS redirection syntax; use the
 PowerShell equivalents above on Windows. Exporting reruns the programs and
-updates the transcripts. Screenshots are captured separately from the viewer.
+updates the transcripts. Capture screenshots separately in the VS Code
+integrated terminal; the optional browser viewer is available for reviewing
+execution results.
 
 ### Instructor example executions
 
@@ -383,7 +385,7 @@ implementations before and after reversing the numbers 1 through 10.
 The expanded automated test run is included as a [text execution](example_executions/tests_unittest.txt)
 and a [fresh screenshot](screenshot/tests_unittest.jpg).
 
-### Retained terminal examples
+### Additional VS Code examples
 
 | Program | Screenshot |
 | --- | --- |
@@ -392,12 +394,12 @@ and a [fresh screenshot](screenshot/tests_unittest.jpg).
 | Problem 3 | [All three stacks](screenshot/p3_stacks.png) |
 | Problem 4: ghosts were not eliminated | [Example 1](screenshot/p4_example1.png) |
 | Problem 4: ghosts were eliminated | [Example 2](screenshot/p4_example2.png) |
-| Earlier automated tests | [Original 32-test execution](screenshot/tests_unittest.png) |
+| Automated tests | [Complete 33-test execution](screenshot/tests_unittest.png) |
 
-These six PNG files show earlier commands and outputs in the VS Code integrated
-terminal. Their corresponding original input files remain available. The fresh
-JPEG captures and text executions above show the instructor inputs and the
-expanded tests.
+These six PNG files were recaptured in the VS Code integrated terminal using
+the original sample inputs and the current test suite. The JPEG screenshots
+above were also captured in VS Code and show the instructor inputs, the stack
+demonstration, and the expanded tests.
 
 ### Local execution viewer
 
