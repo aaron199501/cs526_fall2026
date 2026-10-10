@@ -1,0 +1,11 @@
+Problem 2 — problem2_update
+Command: python3 -B problem2_driver.py < problem2Resources/problem2_update.txt
+Standard input: problem2Resources/problem2_update.txt
+
+Actual output:
+1 -> 12 -> 99 -> 3 -> 5
+1 -> 12 -> 100 -> 3 -> 5
+Final list: 1 -> 12 -> 100 -> 3 -> 5
+
+Exit code: 0
+PASS: matches instructor output in tests/teacher_resources/problem2Executions.txt

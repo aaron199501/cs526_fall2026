@@ -1,0 +1,48 @@
+Problem 4 — problem4_mixed
+Command: python3 -B problem4_driver.py < problem4Resources/problem4_mixed.txt
+Standard input: problem4Resources/problem4_mixed.txt
+
+Actual output:
+add(42)
+add(17)
+add(8)
+add(23)
+add(4)
+add(15)
+add(16)
+4 <-> 8 <-> 15 <-> 16 <-> 17 <-> 23 <-> 42
+exists(23) = True
+exists(22) = False
+count(16) = 1
+total = 125
+median = 16
+sum_middle_three = 48
+delete(4)
+delete(42)
+add(1)
+add(100)
+1 <-> 8 <-> 15 <-> 16 <-> 17 <-> 23 <-> 100
+total = 180
+median = 16
+sum_middle_three = 48
+add(16)
+add(16)
+1 <-> 8 <-> 15 <-> 16 <-> 16 <-> 16 <-> 17 <-> 23 <-> 100
+count(16) = 3
+median = 16
+sum_middle_three = 48
+delete(16)
+delete(16)
+delete(16)
+delete(1)
+delete(100)
+delete(8)
+delete(23)
+15 <-> 17
+median = 16.0
+total = 32
+line 46: sum_middle_three needs at least 3 nodes
+Final list: 15 <-> 17
+
+Exit code: 0
+PASS: matches instructor output in tests/teacher_resources/problem4Executions.txt

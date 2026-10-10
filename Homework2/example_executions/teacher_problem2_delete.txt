@@ -1,0 +1,11 @@
+Problem 2 — problem2_delete
+Command: python3 -B problem2_driver.py < problem2Resources/problem2_delete.txt
+Standard input: problem2Resources/problem2_delete.txt
+
+Actual output:
+delete_at(0) = 1
+line 12: 42 not found, nothing deleted
+Final list: 12 -> 3 -> 5
+
+Exit code: 0
+PASS: matches instructor output in tests/teacher_resources/problem2Executions.txt

@@ -1,0 +1,17 @@
+Problem 2 — original all-directive fixture
+Command: python3 -B problem2_driver.py < problem2Resources/problem2_all_operations.txt
+Standard input: problem2Resources/problem2_all_operations.txt
+
+Actual output:
+get(2) = 7
+find(7) = 2
+find(99) = -1
+len = 5
+delete_at(0) = 1
+delete_at(2) = 10
+5 -> 8
+len = 2
+Final list: 5 -> 8
+
+Exit code: 0
+PASS: additional saved input completed successfully

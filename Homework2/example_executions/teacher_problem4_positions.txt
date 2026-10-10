@@ -1,0 +1,30 @@
+Problem 4 — problem4_positions
+Command: python3 -B problem4_driver.py < problem4Resources/problem4_positions.txt
+Standard input: problem4Resources/problem4_positions.txt
+
+Actual output:
+add(50)
+50
+add(10)
+10 <-> 50
+add(90)
+10 <-> 50 <-> 90
+add(30)
+add(70)
+10 <-> 30 <-> 50 <-> 70 <-> 90
+delete(10)
+30 <-> 50 <-> 70 <-> 90
+delete(90)
+30 <-> 50 <-> 70
+delete(50)
+30 <-> 70
+delete(30)
+delete(70)
+(empty)
+add(60)
+add(20)
+20 <-> 60
+Final list: 20 <-> 60
+
+Exit code: 0
+PASS: matches instructor output in tests/teacher_resources/problem4Executions.txt

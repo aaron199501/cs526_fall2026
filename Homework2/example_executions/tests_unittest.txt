@@ -1,0 +1,41 @@
+Automated tests
+Command: python3 -B -m unittest discover -s tests -v
+
+Actual output:
+
+
+Standard error:
+test_delete_at_head_middle_tail_and_single (test_homework2.SinglyListTests.test_delete_at_head_middle_tail_and_single) ... ok
+test_delete_removes_first_match (test_homework2.SinglyListTests.test_delete_removes_first_match) ... ok
+test_delete_tail_and_only_node_then_reuse (test_homework2.SinglyListTests.test_delete_tail_and_only_node_then_reuse) ... ok
+test_empty_and_invalid_indexes (test_homework2.SinglyListTests.test_empty_and_invalid_indexes) ... ok
+test_find_and_update_duplicate_values (test_homework2.SinglyListTests.test_find_and_update_duplicate_values) ... ok
+test_insert_head_middle_and_tail (test_homework2.SinglyListTests.test_insert_head_middle_and_tail) ... ok
+test_operation_sequence_against_python_list (test_homework2.SinglyListTests.test_operation_sequence_against_python_list) ... ok
+test_delete_head_middle_tail_and_missing_value (test_homework2.SortedListTests.test_delete_head_middle_tail_and_missing_value) ... ok
+test_delete_only_node_then_reuse (test_homework2.SortedListTests.test_delete_only_node_then_reuse) ... ok
+test_empty_queries_and_short_list_errors (test_homework2.SortedListTests.test_empty_queries_and_short_list_errors) ... ok
+test_even_middle_three_uses_left_middle_and_median (test_homework2.SortedListTests.test_even_middle_three_uses_left_middle_and_median) ... ok
+test_odd_middle_three_median_and_total (test_homework2.SortedListTests.test_odd_middle_three_median_and_total) ... ok
+test_operation_sequence_against_sorted_python_list (test_homework2.SortedListTests.test_operation_sequence_against_sorted_python_list) ... ok
+test_sorted_insertion_with_duplicates_and_negatives (test_homework2.SortedListTests.test_sorted_insertion_with_duplicates_and_negatives) ... ok
+test_base_cases (test_homework2.StairsTests.test_base_cases) ... ok
+test_small_inputs_against_explicit_path_enumeration (test_homework2.StairsTests.test_small_inputs_against_explicit_path_enumeration) ... ok
+test_empty_input_finishes_cleanly (test_teacher_examples.DriverBoundaryTests.test_empty_input_finishes_cleanly) ... ok
+test_non_finite_values_cannot_break_sorted_order (test_teacher_examples.DriverBoundaryTests.test_non_finite_values_cannot_break_sorted_order) ... ok
+test_original_inputs_are_retained_and_processed (test_teacher_examples.DriverBoundaryTests.test_original_inputs_are_retained_and_processed) ... ok
+test_invalid_cli_is_rejected (test_teacher_examples.StaircaseCliTests.test_invalid_cli_is_rejected) ... ok
+test_recursive_functions_have_no_loops (test_teacher_examples.StaircaseCliTests.test_recursive_functions_have_no_loops) ... ok
+test_recursive_paths_match_independent_enumeration (test_teacher_examples.StaircaseCliTests.test_recursive_paths_match_independent_enumeration) ... ok
+test_zero_step_path_and_count (test_teacher_examples.StaircaseCliTests.test_zero_step_path_and_count) ... ok
+test_all_19_teacher_outputs (test_teacher_examples.TeacherExampleTests.test_all_19_teacher_outputs) ... ok
+test_combined_teacher_staircase_output (test_teacher_examples.TeacherExampleTests.test_combined_teacher_staircase_output) ... ok
+test_default_staircase_demo_keeps_pdf_examples (test_teacher_examples.TeacherExampleTests.test_default_staircase_demo_keeps_pdf_examples) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 1.551s
+
+OK
+
+Exit code: 0
+PASS: all automated tests completed successfully

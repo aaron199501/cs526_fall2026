@@ -1,0 +1,32 @@
+Problem 4 — problem4_statistics
+Command: python3 -B problem4_driver.py < problem4Resources/problem4_statistics.txt
+Standard input: problem4Resources/problem4_statistics.txt
+
+Actual output:
+total = 0
+add(6)
+add(2)
+add(4)
+2 <-> 4 <-> 6
+total = 12
+sum_middle_three = 12
+median = 4
+add(8)
+2 <-> 4 <-> 6 <-> 8
+total = 20
+sum_middle_three = 12
+median = 5.0
+add(10)
+2 <-> 4 <-> 6 <-> 8 <-> 10
+total = 30
+sum_middle_three = 18
+median = 6
+add(12)
+2 <-> 4 <-> 6 <-> 8 <-> 10 <-> 12
+total = 42
+sum_middle_three = 18
+median = 7.0
+Final list: 2 <-> 4 <-> 6 <-> 8 <-> 10 <-> 12
+
+Exit code: 0
+PASS: matches instructor output in tests/teacher_resources/problem4Executions.txt

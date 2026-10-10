@@ -1,0 +1,8 @@
+Problem 3 — 10 steps (count only)
+Command: python3 -B problem3.py --steps 10 --count-only
+
+Actual output:
+Step Combinations for an input of 10 steps:  274 
+
+Exit code: 0
+PASS: matches instructor output in tests/teacher_resources/problem3Excutions.txt

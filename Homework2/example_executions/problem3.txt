@@ -1,0 +1,10 @@
+Problem 3 — required 3, 5, and 10 step counts
+Command: python3 -B problem3.py
+
+Actual output:
+ways(3) = 4
+ways(5) = 13
+ways(10) = 274
+
+Exit code: 0
+PASS: matches the required staircase counts

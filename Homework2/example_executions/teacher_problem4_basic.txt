@@ -1,0 +1,15 @@
+Problem 4 — problem4_basic
+Command: python3 -B problem4_driver.py < problem4Resources/problem4_basic.txt
+Standard input: problem4Resources/problem4_basic.txt
+
+Actual output:
+add(10)
+add(4)
+add(29)
+add(8)
+add(2)
+2 <-> 4 <-> 8 <-> 10 <-> 29
+Final list: 2 <-> 4 <-> 8 <-> 10 <-> 29
+
+Exit code: 0
+PASS: matches instructor output in tests/teacher_resources/problem4Executions.txt
