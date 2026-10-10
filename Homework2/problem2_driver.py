@@ -1,4 +1,6 @@
+"""Read singly linked-list directives and report recoverable input errors."""
 import sys
+
 from problem2 import SinglyLinkedList
 
 
@@ -12,110 +14,71 @@ def parse_value(text):
             return text
 
 
+SYNTAX = {
+    "append": "append <value>",
+    "prepend": "prepend <value>",
+    "insert": "insert <index> <value>",
+    "get": "get <index>",
+    "find": "find <value>",
+    "len": "len",
+    "update": "update <index> <value>",
+    "delete": "delete <value>",
+    "delete_at": "delete_at <index>",
+    "print_list": "print_list",
+}
+ARG_COUNTS = {
+    "append": 1, "prepend": 1, "insert": 2, "get": 1,
+    "find": 1, "len": 0, "update": 2, "delete": 1,
+    "delete_at": 1, "print_list": 0,
+}
+
+
 def main():
     linked_list = SinglyLinkedList()
-
-    for line in sys.stdin:
-        line = line.strip()
-
-        # Ignore blank lines and comments
+    for line_number, raw_line in enumerate(sys.stdin, 1):
+        line = raw_line.strip()
         if not line or line.startswith("#"):
             continue
-
-        parts = line.split()
-        command = parts[0]
-        args = parts[1:]
-
+        command, *args = line.split()
+        prefix = f"line {line_number}: "
+        if command not in SYNTAX:
+            print(f"{prefix}unknown directive '{command}'")
+            continue
+        if len(args) != ARG_COUNTS[command]:
+            print(f"{prefix}expected '{SYNTAX[command]}', got '{line}'")
+            continue
+        if command in ("insert", "get", "update", "delete_at"):
+            try:
+                index = int(args[0])
+            except ValueError:
+                print(f"{prefix}index must be a whole number, got '{line}'")
+                continue
         try:
             if command == "append":
-                if len(args) != 1:
-                    raise ValueError
-
-                value = parse_value(args[0])
-                linked_list.append(value)
-
+                linked_list.append(parse_value(args[0]))
             elif command == "prepend":
-                if len(args) != 1:
-                    raise ValueError
-
-                value = parse_value(args[0])
-                linked_list.prepend(value)
-
+                linked_list.prepend(parse_value(args[0]))
             elif command == "insert":
-                if len(args) != 2:
-                    raise ValueError
-
-                index = int(args[0])
-                value = parse_value(args[1])
-
-                linked_list.insert(index, value)
-
+                linked_list.insert(index, parse_value(args[1]))
             elif command == "get":
-                if len(args) != 1:
-                    raise ValueError
-
-                index = int(args[0])
-                value = linked_list.get(index)
-
-                print(f"get({index}) = {value}")
-
+                print(f"get({index}) = {linked_list.get(index)}")
             elif command == "find":
-                if len(args) != 1:
-                    raise ValueError
-
                 value = parse_value(args[0])
-                position = linked_list.find(value)
-
-                print(f"find({value}) = {position}")
-
+                print(f"find({value}) = {linked_list.find(value)}")
             elif command == "len":
-                if len(args) != 0:
-                    raise ValueError
-
-                print(len(linked_list))
-
+                print(f"len = {len(linked_list)}")
             elif command == "update":
-                if len(args) != 2:
-                    raise ValueError
-
-                index = int(args[0])
-                value = parse_value(args[1])
-
-                linked_list.update(index, value)
-
+                linked_list.update(index, parse_value(args[1]))
             elif command == "delete":
-                if len(args) != 1:
-                    raise ValueError
-
                 value = parse_value(args[0])
-
                 if not linked_list.delete(value):
-                    print(f"Warning: value {value} not found")
-
+                    print(f"{prefix}{value} not found, nothing deleted")
             elif command == "delete_at":
-                if len(args) != 1:
-                    raise ValueError
-
-                index = int(args[0])
-                value = linked_list.delete_at(index)
-
-                print(f"delete_at({index}) = {value}")
-
+                print(f"delete_at({index}) = {linked_list.delete_at(index)}")
             elif command == "print_list":
-                if len(args) != 0:
-                    raise ValueError
-
                 linked_list.print_list()
-
-            else:
-                print(f"Warning: unknown directive '{command}'")
-
-        except ValueError:
-            print(f"Warning: invalid arguments in line: {line}")
-
         except IndexError:
-            print(f"Warning: index out of range in line: {line}")
-
+            print(f"{prefix}index {index} out of range")
     print("Final list: ", end="")
     linked_list.print_list()
 
