@@ -1,0 +1,158 @@
+CS526 Homework Assignment 3
+  Boston University Metropolitan College
+
+  Each program reads its input from standard input, for example:
+    python3 palindrome.py < palindrome_input.txt
+  Your output must match the expected output exactly, so it can be compared line by line.
+
+  Problem 1 (15 pts)
+  - Write a program that determines whether each of a list of strings is a palindrome
+    (reads the same forwards and backwards).
+  - Input: a file with one string per line.
+    - The characters in a string may be separated by single spaces, e.g. "g e e k".
+      This does not change the answer: "g e e k" is a palindrome exactly when "geek" is.
+    - Upper and lower case letters are different characters ("Aa" is not a palindrome).
+    - The file will not contain blank lines.
+  - Output:
+    - One line per input string: True if it is a palindrome, False if it is not.
+    - A final line with the total number of palindromes.
+  - Example:
+    - Input:   geek
+               asleelsa
+               thisisatesttsetasisiht
+    - Output:  False
+               True
+               True
+               2
+
+  Problem 2 (20 pts)
+  - Using recursion, write a function that finds, prints and counts every unique substring
+    of a given string.
+    - A substring is a run of consecutive characters from the string. "ac" is not a
+      substring of "abc".
+    - The empty string is not counted.
+    - A substring that appears more than once is printed and counted only once.
+    - The search for substrings must be done with recursion, not with loops alone. You may
+      use a set to remove duplicates.
+  - Input: a file with one string on a line.
+  - Output:
+    - Each unique substring on its own line, in alphabetical order.
+    - A final line with the number of unique substrings.
+  - Example:
+    - Input:   abcab
+    - Output:  a
+               ab
+               abc
+               abca
+               abcab
+               b
+               bc
+               bca
+               bcab
+               c
+               ca
+               cab
+               12
+
+  Problem 3 (20 pts)
+  - Using recursion, write a function that reverses a stack for each of these three
+    implementations:
+    - a stack implemented as an array
+    - a stack implemented as a singly linked list
+    - a stack implemented as a doubly linked list
+  - Each stack must support push, pop, peek and is_empty.
+  - The reversal must:
+    - reverse the stack in place (the same stack object is reversed; do not build and
+      return a new stack)
+    - use recursion and no loops. It may work directly on the array or the list nodes.
+  - Stacks are listed from bottom to top, so pushing 1, then 2, then 3 is listed as 1, 2, 3
+    with 3 on top.
+  - Input: push the numbers 1 through 10, in that order, onto each stack.
+  - Output: for each implementation, print the stack before and after reversing it.
+  - Example (one implementation):
+    - Before:  1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+    - After:   10, 9, 8, 7, 6, 5, 4, 3, 2, 1
+
+  Problem 4 (45 pts)
+  - A group of n Ghostbusters is battling n ghosts. Each Ghostbuster carries a proton pack
+    that shoots a stream at a ghost, destroying it.
+  - A stream is an infinite straight line. It passes through the Ghostbuster and the ghost
+    and keeps going forever in both directions.
+  - The Ghostbusters have already paired off with the ghosts: each Ghostbuster has one ghost
+    to shoot, and each ghost is the target of exactly one Ghostbuster. The pairs are given
+    in the input and cannot be changed.
+  - All the Ghostbusters fire at the same time. This only works if no two streams cross.
+    - Two streams that lie on the same line count as crossing.
+  - Write a program that reads the pairs and decides whether all of the ghosts can be
+    eliminated in this single shot.
+  - Output: exactly one of these two lines:
+      All Ghosts: were eliminated
+      All Ghosts: were not eliminated
+  - Input format:
+    - Line 1: the number of Ghostbusters, n (n >= 1).
+    - Lines 2 through n+1: one Ghostbuster and the ghost it shoots, in the form
+        B <x> <y> G <x> <y>
+      where the first <x> <y> is the Ghostbuster's position and the second <x> <y> is the
+      ghost's position.
+    - All coordinates are integers and may be negative.
+    - A stream may be vertical (the Ghostbuster and the ghost have the same x).
+    - A Ghostbuster and its ghost will never be at the same position.
+  - Examples:
+    - Input:   2
+               B 0 0 G 5 5
+               B 3 0 G 0 3
+      Output:  All Ghosts: were not eliminated
+
+    - Input:   3
+               B 0 0 G 2 2
+               B 3 0 G 5 2
+               B 0 4 G 1 5
+      Output:  All Ghosts: were eliminated
+
+    - Input:   2
+               B 0 0 G 2 2
+               B 5 5 G 7 7
+      Output:  All Ghosts: were not eliminated
+
+    - Input:   2
+               B 1 0 G 1 6
+               B 4 2 G 4 -3
+      Output:  All Ghosts: were eliminated
+  - Grading: partial credit is given for the design and algorithm described in the
+    Algorithm section of your README. Full credit is given for a correct working solution.
+
+======================================================================
+Submission
+======================================================================
+
+- Submit your assignment on Brightspace. Your submission is a link to
+  your git repository (for example, on GitHub).
+
+- In your repository, put this homework in ONE of the following:
+    a branch named after the homework, e.g. Homework3
+    a folder named after the homework, e.g. Homework3/
+
+- The branch or folder must contain:
+
+    Code          every source file for Problems 1-4 (answer Problem 1
+                  in your README or in a text file).
+
+    README        a README file (e.g. README.md) with these sections:
+                    Introduction     what the homework asks and what
+                                     your code does
+                    Algorithm        the heart of your solution: how your
+                                     linked lists and recursive functions
+                                     work
+                    Interesting      anything notable about your code,
+                    aspects          such as design choices, edge cases,
+                                     or trade-offs you made
+                    How to run       the commands to run each program and
+                                     its tests, e.g.
+                                       python3 problem2_driver.py < problem2Resources/problem2_basic.txt
+
+    Test files    every file you used to test your code, such as driver
+                  input files and unit tests.
+
+    Example       example runs of your code, either as text files that
+    executions    show each command and its output, or as screenshots of
+                  your code running.
