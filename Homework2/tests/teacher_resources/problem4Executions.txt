@@ -1,0 +1,209 @@
+===== problem4Resources/problem4_basic.txt
+$ python3 problem4_driver.py < problem4Resources/problem4_basic.txt
+add(10)
+add(4)
+add(29)
+add(8)
+add(2)
+2 <-> 4 <-> 8 <-> 10 <-> 29
+Final list: 2 <-> 4 <-> 8 <-> 10 <-> 29
+
+===== problem4Resources/problem4_duplicates.txt
+$ python3 problem4_driver.py < problem4Resources/problem4_duplicates.txt
+add(7)
+add(3)
+add(7)
+add(7)
+add(1)
+add(3)
+1 <-> 3 <-> 3 <-> 7 <-> 7 <-> 7
+count(7) = 3
+count(3) = 2
+count(1) = 1
+count(4) = 0
+delete(7)
+1 <-> 3 <-> 3 <-> 7 <-> 7
+count(7) = 2
+delete(7)
+delete(7)
+count(7) = 0
+exists(7) = False
+line 21: 7 not found, nothing deleted
+1 <-> 3 <-> 3
+Final list: 1 <-> 3 <-> 3
+
+===== problem4Resources/problem4_errors.txt
+$ python3 problem4_driver.py < problem4Resources/problem4_errors.txt
+line 2: median of an empty list
+line 3: sum_middle_three needs at least 3 nodes
+line 4: 5 not found, nothing deleted
+add(5)
+add(1)
+line 7: sum_middle_three needs at least 3 nodes
+line 8: unknown directive 'insert'
+line 9: expected 'add <value>', got 'add'
+line 10: value must be a number, got 'add five'
+line 11: expected 'count <value>', got 'count'
+line 12: expected 'exists <value>', got 'exists 1 2'
+line 13: expected 'print_list', got 'print_list extra'
+line 14: 99 not found, nothing deleted
+add(3)
+1 <-> 3 <-> 5
+sum_middle_three = 9
+Final list: 1 <-> 3 <-> 5
+
+===== problem4Resources/problem4_example.txt
+$ python3 problem4_driver.py < problem4Resources/problem4_example.txt
+add(10)
+add(4)
+add(29)
+add(8)
+add(2)
+add(15)
+add(41)
+2 <-> 4 <-> 8 <-> 10 <-> 15 <-> 29 <-> 41
+total = 109
+sum_middle_three = 33
+median = 10
+delete(41)
+2 <-> 4 <-> 8 <-> 10 <-> 15 <-> 29
+total = 68
+sum_middle_three = 22
+median = 9.0
+add(8)
+2 <-> 4 <-> 8 <-> 8 <-> 10 <-> 15 <-> 29
+count(8) = 2
+count(5) = 0
+exists(15) = True
+exists(5) = False
+Final list: 2 <-> 4 <-> 8 <-> 8 <-> 10 <-> 15 <-> 29
+
+===== problem4Resources/problem4_mixed.txt
+$ python3 problem4_driver.py < problem4Resources/problem4_mixed.txt
+add(42)
+add(17)
+add(8)
+add(23)
+add(4)
+add(15)
+add(16)
+4 <-> 8 <-> 15 <-> 16 <-> 17 <-> 23 <-> 42
+exists(23) = True
+exists(22) = False
+count(16) = 1
+total = 125
+median = 16
+sum_middle_three = 48
+delete(4)
+delete(42)
+add(1)
+add(100)
+1 <-> 8 <-> 15 <-> 16 <-> 17 <-> 23 <-> 100
+total = 180
+median = 16
+sum_middle_three = 48
+add(16)
+add(16)
+1 <-> 8 <-> 15 <-> 16 <-> 16 <-> 16 <-> 17 <-> 23 <-> 100
+count(16) = 3
+median = 16
+sum_middle_three = 48
+delete(16)
+delete(16)
+delete(16)
+delete(1)
+delete(100)
+delete(8)
+delete(23)
+15 <-> 17
+median = 16.0
+total = 32
+line 46: sum_middle_three needs at least 3 nodes
+Final list: 15 <-> 17
+
+===== problem4Resources/problem4_numbers.txt
+$ python3 problem4_driver.py < problem4Resources/problem4_numbers.txt
+add(3)
+add(-4)
+add(0)
+add(2.5)
+add(-1.5)
+add(10)
+-4 <-> -1.5 <-> 0 <-> 2.5 <-> 3 <-> 10
+total = 10.0
+median = 1.25
+sum_middle_three = 1.0
+exists(-4) = True
+exists(2.5) = True
+exists(2) = False
+count(0) = 1
+delete(-4)
+delete(2.5)
+-1.5 <-> 0 <-> 3 <-> 10
+median = 1.5
+Final list: -1.5 <-> 0 <-> 3 <-> 10
+
+===== problem4Resources/problem4_positions.txt
+$ python3 problem4_driver.py < problem4Resources/problem4_positions.txt
+add(50)
+50
+add(10)
+10 <-> 50
+add(90)
+10 <-> 50 <-> 90
+add(30)
+add(70)
+10 <-> 30 <-> 50 <-> 70 <-> 90
+delete(10)
+30 <-> 50 <-> 70 <-> 90
+delete(90)
+30 <-> 50 <-> 70
+delete(50)
+30 <-> 70
+delete(30)
+delete(70)
+(empty)
+add(60)
+add(20)
+20 <-> 60
+Final list: 20 <-> 60
+
+===== problem4Resources/problem4_simple.txt
+$ python3 problem4_driver.py < problem4Resources/problem4_simple.txt
+add(5)
+add(1)
+add(3)
+1 <-> 3 <-> 5
+exists(3) = True
+delete(3)
+exists(3) = False
+1 <-> 5
+Final list: 1 <-> 5
+
+===== problem4Resources/problem4_statistics.txt
+$ python3 problem4_driver.py < problem4Resources/problem4_statistics.txt
+total = 0
+add(6)
+add(2)
+add(4)
+2 <-> 4 <-> 6
+total = 12
+sum_middle_three = 12
+median = 4
+add(8)
+2 <-> 4 <-> 6 <-> 8
+total = 20
+sum_middle_three = 12
+median = 5.0
+add(10)
+2 <-> 4 <-> 6 <-> 8 <-> 10
+total = 30
+sum_middle_three = 18
+median = 6
+add(12)
+2 <-> 4 <-> 6 <-> 8 <-> 10 <-> 12
+total = 42
+sum_middle_three = 18
+median = 7.0
+Final list: 2 <-> 4 <-> 6 <-> 8 <-> 10 <-> 12
+
