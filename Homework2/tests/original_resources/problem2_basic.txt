@@ -1,0 +1,8 @@
+append 12
+append 3
+append 5
+prepend 1
+get 2
+delete 3
+update 0 8
+append 7

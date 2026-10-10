@@ -1,0 +1,19 @@
+# Errors must print a warning and allow later valid commands to run.
+get 0
+delete_at 0
+update 0 5
+delete 99
+append
+append 1 2
+insert one 3
+insert 0
+len 1
+print_list extra
+unknown
+append 7
+insert 5 9
+get -1
+delete_at -1
+update 2 4
+append 8
+print_list
