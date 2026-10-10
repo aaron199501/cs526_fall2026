@@ -1,0 +1,44 @@
+Problem 1 — palendrome_1.txt
+Actual subprocess execution · Python 3.14.7
+
+Command:
+python3 -B palindrome.py < tests/teacher_resources/palendrome_1.txt
+
+Verification:
+PASS — matches teacher answer: palendrome_ans_1.txt (CRLF and one optional final newline normalized)
+Exit status: 0
+Expected output origin: Teacher answer: tests/teacher_resources/palendrome_ans_1.txt
+
+Input:
+h n m b v k x t o t z k v b p n h
+o n j e s s p b k b u s s e j n o
+f c i p y n z z c v r f
+d e r r x q r r c s s c r r u x r r e d
+z i f g z z g f i z
+o u l e t y j o n r o
+i g e m n b b n m e g i
+r g i c w e c y g r
+
+
+Actual stdout:
+False
+False
+False
+False
+True
+False
+True
+False
+2
+
+
+Expected output:
+False
+False
+False
+False
+True
+False
+True
+False
+2

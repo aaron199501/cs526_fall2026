@@ -1,0 +1,51 @@
+Problem 1 — palendrome_4S.txt
+Actual subprocess execution · Python 3.14.7
+
+Command:
+python3 -B palindrome.py < tests/teacher_resources/palendrome_4S.txt
+
+Verification:
+PASS — matches an independent mirrored-character reference; teacher answer palendrome_ans_4S.txt was not supplied
+Exit status: 0
+Expected output origin: Independent mirrored-character reference; teacher answer palendrome_ans_4S.txt was not supplied
+
+Input:
+k f x u x x u x f k
+e k q u p o p u r k e
+k q y d i f v w t f i q y q k
+n j s h r c m c m h e j n
+l z d w z h s w o i b l
+z n d k z u s g z g b k p i g d c p z
+r q j k d s n s d k j q r
+m f a y k i x i k y a f m
+u j j j x q x s i l i s g q x y j j u
+e c h e c v f j f v c e h c e
+
+
+Actual stdout:
+True
+False
+False
+False
+False
+False
+True
+True
+False
+True
+4
+
+
+Expected output:
+True
+False
+False
+False
+False
+False
+True
+True
+False
+True
+4
+

@@ -1,0 +1,53 @@
+Automated tests
+Actual subprocess execution · Python 3.14.7
+
+Command:
+python3 -B -m unittest discover -s tests -v
+
+Verification:
+PASS — all automated tests completed successfully
+Exit status: 0
+
+Actual stdout:
+
+
+Actual stderr:
+test_all_input_and_expected_output_files (test_homework.ExactOutputTests.test_all_input_and_expected_output_files) ... ok
+test_stack_demonstration_output (test_homework.ExactOutputTests.test_stack_demonstration_output) ... ok
+test_collinear_separate_pairs (test_homework.GhostbusterTests.test_collinear_separate_pairs) ... ok
+test_large_integer_coordinates_without_rounding (test_homework.GhostbusterTests.test_large_integer_coordinates_without_rounding) ... ok
+test_many_parallel_streams (test_homework.GhostbusterTests.test_many_parallel_streams) ... ok
+test_nonparallel_infinite_lines_cross_outside_segments (test_homework.GhostbusterTests.test_nonparallel_infinite_lines_cross_outside_segments) ... ok
+test_opposite_directions_and_scaled_vectors (test_homework.GhostbusterTests.test_opposite_directions_and_scaled_vectors) ... ok
+test_parallel_distinct_lines (test_homework.GhostbusterTests.test_parallel_distinct_lines) ... ok
+test_randomized_against_independent_pairwise_geometry (test_homework.GhostbusterTests.test_randomized_against_independent_pairwise_geometry) ... ok
+test_single_stream (test_homework.GhostbusterTests.test_single_stream) ... ok
+test_vertical_and_horizontal_lines (test_homework.GhostbusterTests.test_vertical_and_horizontal_lines) ... ok
+test_case_is_significant (test_homework.PalindromeTests.test_case_is_significant) ... ok
+test_crlf_and_final_line_without_newline (test_homework.PalindromeTests.test_crlf_and_final_line_without_newline) ... ok
+test_exhaustive_short_strings (test_homework.PalindromeTests.test_exhaustive_short_strings) ... ok
+test_no_input (test_homework.PalindromeTests.test_no_input) ... ok
+test_single_character_and_symbols (test_homework.PalindromeTests.test_single_character_and_symbols) ... ok
+test_space_separated_characters (test_homework.PalindromeTests.test_space_separated_characters) ... ok
+test_teacher_examples (test_homework.PalindromeTests.test_teacher_examples) ... ok
+test_empty_stack_and_underflow (test_homework.StackTests.test_empty_stack_and_underflow) ... ok
+test_operations_after_reverse (test_homework.StackTests.test_operations_after_reverse) ... ok
+test_push_peek_pop_lifo (test_homework.StackTests.test_push_peek_pop_lifo) ... ok
+test_reversal_functions_use_recursion_without_loops (test_homework.StackTests.test_reversal_functions_use_recursion_without_loops) ... ok
+test_reverse_same_stack_and_storage (test_homework.StackTests.test_reverse_same_stack_and_storage) ... ok
+test_reverse_twice_restores_order (test_homework.StackTests.test_reverse_twice_restores_order) ... ok
+test_empty_and_single_character (test_homework.SubstringTests.test_empty_and_single_character) ... ok
+test_exhaustive_short_strings (test_homework.SubstringTests.test_exhaustive_short_strings) ... ok
+test_no_input (test_homework.SubstringTests.test_no_input) ... ok
+test_nonconsecutive_characters_are_excluded (test_homework.SubstringTests.test_nonconsecutive_characters_are_excluded) ... ok
+test_recursion_depth_on_long_repeated_input (test_homework.SubstringTests.test_recursion_depth_on_long_repeated_input) ... ok
+test_repetitions_are_unique (test_homework.SubstringTests.test_repetitions_are_unique) ... ok
+test_spaces_and_case_are_preserved (test_homework.SubstringTests.test_spaces_and_case_are_preserved) ... ok
+test_teacher_example (test_homework.SubstringTests.test_teacher_example) ... ok
+test_all_teacher_examples (test_teacher_examples.TeacherExampleTests.test_all_teacher_examples) ... ok
+
+----------------------------------------------------------------------
+Ran 33 tests in 1.539s
+
+OK
+

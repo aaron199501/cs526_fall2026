@@ -1,0 +1,25 @@
+Problem 4 — ghostbusters_input_1.txt
+Actual subprocess execution · Python 3.14.7
+
+Command:
+python3 -B ghostbusters.py < tests/teacher_resources/ghostbusters_input_1.txt
+
+Verification:
+PASS — matches teacher answer: ghostbusters_ans_1.txt (CRLF and one optional final newline normalized)
+Exit status: 0
+Expected output origin: Teacher answer: tests/teacher_resources/ghostbusters_ans_1.txt
+
+Input:
+3
+B 6 211 G 38 1555
+B 32 463 G 3 -1
+B 3 -45 G 12 -279
+
+
+Actual stdout:
+All Ghosts: were not eliminated
+
+
+Expected output:
+All Ghosts: were not eliminated
+

@@ -1,0 +1,39 @@
+Problem 2 — unique_substrings_input_2.txt
+Actual subprocess execution · Python 3.14.7
+
+Command:
+python3 -B substrings.py < tests/teacher_resources/unique_substrings_input_2.txt
+
+Verification:
+PASS — matches teacher answer: unique_substrings_ans_2.txt (CRLF and one optional final newline normalized)
+Exit status: 0
+Expected output origin: Teacher answer: tests/teacher_resources/unique_substrings_ans_2.txt
+
+Input:
+xyzy
+
+
+Actual stdout:
+x
+xy
+xyz
+xyzy
+y
+yz
+yzy
+z
+zy
+9
+
+
+Expected output:
+x
+xy
+xyz
+xyzy
+y
+yz
+yzy
+z
+zy
+9
