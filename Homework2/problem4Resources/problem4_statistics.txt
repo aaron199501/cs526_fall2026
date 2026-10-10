@@ -1,0 +1,27 @@
+# total, sum_middle_three, and median as the list grows from odd to even lengths.
+total
+add 6
+add 2
+add 4
+print_list
+total
+sum_middle_three
+median
+
+add 8
+print_list
+total
+sum_middle_three
+median
+
+add 10
+print_list
+total
+sum_middle_three
+median
+
+add 12
+print_list
+total
+sum_middle_three
+median

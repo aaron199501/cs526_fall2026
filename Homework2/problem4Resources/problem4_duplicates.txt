@@ -1,0 +1,22 @@
+# Duplicate values: counting, deleting one copy at a time, and exists.
+add 7
+add 3
+add 7
+add 7
+add 1
+add 3
+print_list
+count 7
+count 3
+count 1
+count 4
+
+delete 7
+print_list
+count 7
+delete 7
+delete 7
+count 7
+exists 7
+delete 7
+print_list

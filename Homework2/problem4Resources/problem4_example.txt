@@ -1,0 +1,25 @@
+# The example from Problem 4.1 in Homework2.txt.
+add 10
+add 4
+add 29
+add 8
+add 2
+add 15
+add 41
+print_list
+total
+sum_middle_three
+median
+
+delete 41
+print_list
+total
+sum_middle_three
+median
+
+add 8
+print_list
+count 8
+count 5
+exists 15
+exists 5

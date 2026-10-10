@@ -1,0 +1,19 @@
+# Negative numbers, zero, and decimals sort together with whole numbers.
+add 3
+add -4
+add 0
+add 2.5
+add -1.5
+add 10
+print_list
+total
+median
+sum_middle_three
+exists -4
+exists 2.5
+exists 2
+count 0
+delete -4
+delete 2.5
+print_list
+median

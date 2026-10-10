@@ -1,0 +1,9 @@
+# Simple test case: add, look up, and delete a few values.
+add 5
+add 1
+add 3
+print_list
+exists 3
+delete 3
+exists 3
+print_list

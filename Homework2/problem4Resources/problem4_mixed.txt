@@ -1,0 +1,46 @@
+# A long mix of every directive, in upper and lower case.
+add 42
+ADD 17
+add 8
+Add 23
+add 4
+add 15
+add 16
+print_list
+exists 23
+exists 22
+count 16
+total
+median
+sum_middle_three
+
+# Remove the ends, add new ones past both ends.
+delete 4
+delete 42
+add 1
+add 100
+print_list
+total
+median
+sum_middle_three
+
+# Duplicates in the middle shift the median.
+add 16
+add 16
+print_list
+count 16
+median
+sum_middle_three
+
+# Delete everything down to two values.
+delete 16
+delete 16
+delete 16
+delete 1
+delete 100
+delete 8
+delete 23
+print_list
+median
+total
+sum_middle_three
