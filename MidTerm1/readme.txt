@@ -1,6 +1,21 @@
 CS526 Mid-Term 1
 Boston University Metropolitan College
 
+Submission
+----------
+Repository: https://github.com/aaron199501/cs526_fall2026
+Assignment folder: MidTerm1/
+Latest folder link: https://github.com/aaron199501/cs526_fall2026/tree/main/MidTerm1
+
+Submit the GitHub folder link in Blackboard, as for the homeworks. A folder
+link using a full commit hash preserves the exact submitted version.
+This folder contains all program source code, supplied inputs, running
+examples, and algorithm descriptions. Each problem has its own readme with
+its algorithm and exact run commands. Saved execution output is in results/;
+screenshots are in screenshot/.
+MidTerm1.zip is provided separately as a local archive of this folder.
+Uploading files to GitHub does not submit the link in Blackboard.
+
 Contents
 --------
 MidTerm1.code-workspace             Portable VS Code folder and layout settings
@@ -161,5 +176,3 @@ To include the interpreter path in a demonstration:
 
     python -B tests/run_examples.py snowfall_1 --show-interpreter
 
-MidTerm1.zip contains the complete MidTerm1 folder. Files are prepared locally;
-no course-site submission or repository publication is performed here.
