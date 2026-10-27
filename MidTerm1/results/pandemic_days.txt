@@ -1,0 +1,38 @@
+CS526 Mid-Term: actual program execution
+Python 3.14.7
+In the commands below, python denotes this interpreter.
+
+=== pandemic_days ===
+Working directory: Problem2_Pandemic
+Command: python -B pandemic.py inputs/pandemic_input1.txt --show-days
+Exit status: 0; elapsed: 0.1246 seconds; expected result: PASS
+Program output:
+Day 1
+. . . . .
+. . . X .
+. . X . .
+. . . . X
+. . . . .
+
+Day 2
+. . . . .
+. . X X .
+. . X X .
+. . . . X
+. . . . .
+
+Day 3
+. . . . .
+. . X X .
+. . X X X
+. . . X X
+. . . . .
+
+Day 4
+. . . . .
+. . X X X
+. . X X X
+. . X X X
+. . . . .
+
+There are healthy counties left
