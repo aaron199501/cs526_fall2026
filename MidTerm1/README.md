@@ -241,7 +241,10 @@ answer format. To reproduce an execution, use the direct program commands
 listed in How to run above.
 
 The following table links twelve saved text executions and their VS Code
-integrated terminal screenshots. The eleven original input cases include all
+integrated terminal screenshots. Each screenshot shows the relevant source
+code on the left and its actual execution command and output on the right.
+The daily-board screenshot includes every printed board and the final answer.
+The eleven original input cases include all
 four Snowfall demonstrations required by the assignment; the additional
 demonstration displays the synchronous daily infection states.
 
