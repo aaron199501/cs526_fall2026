@@ -1,0 +1,10 @@
+CS526 Mid-Term: actual program execution
+Python 3.14.7
+In the commands below, python denotes this interpreter.
+
+=== puzzle_1 ===
+Working directory: .
+Command: python -B puzzle_game.py inputs/puzzle_game_input1.txt
+Exit status: 0; elapsed: 0.1291 seconds; expected result: PASS
+Program output:
+The board is valid
