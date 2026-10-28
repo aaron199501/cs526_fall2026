@@ -1,0 +1,13 @@
+{
+  "inputs/pandemic_input1.txt": "9ba63779de3e3c3e2bda6b8226d95a0ee7647fe532fa25a4c4c5bb8a6faa95cf",
+  "inputs/pandemic_input2.txt": "97d123ec07f155d1941c89f2c8f9e3a580e96c1739001ea87571c4ec85d89ba8",
+  "inputs/puzzle_game_input1.txt": "288bd388bd7090beffbae60e548f8dcf8920a982f35db65e696088c69ba89b16",
+  "inputs/puzzle_game_input2.txt": "4a0e3d9b17296fe1620f1d04103b130e644eabe80f048ccd2f4433a29095114f",
+  "inputs/puzzle_game_input3.txt": "ff987835e16b86b45d5d1baee964b0e3c45b1c277322ce6e3be2dfc5e1003aec",
+  "inputs/puzzle_game_input4.txt": "13e66109f7b8e7d9f3ef53e7832b0904c275f12b3f30fe42d1bf8cda1934cf4c",
+  "inputs/snowfall_input1.txt": "0871c6667a6c9bc7ef71fd880c34a824a80ec9446a299827db242ea80b4297a3",
+  "inputs/snowfall_input2.txt": "15db1c87ad185f7dfe8bd20c770cbb9b197efafd69c107db2a4756becfbe6c80",
+  "inputs/snowfall_input3.txt": "2263a6813c9f8b8a0a0d0353223b788562048ea1fb69f905cf2789ef015d394e",
+  "inputs/snowfall_input4.txt": "33b1bacb224916709de894dc39a51cfbed31799a1347d0414347adea1be18bd3",
+  "inputs/snowfall_input5.txt": "fcf1118351be8397e5f451ca4bc45bff96a26824f71e01f56a13fcd16e2702f7"
+}
