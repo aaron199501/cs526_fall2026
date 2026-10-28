@@ -5,6 +5,6 @@ In the commands below, python denotes this interpreter.
 === snowfall_1 ===
 Working directory: .
 Command: python -B snowfall.py inputs/snowfall_input1.txt
-Exit status: 0; elapsed: 0.1118 seconds; expected result: PASS
+Exit status: 0; elapsed: 0.1051 seconds; expected result: PASS
 Program output:
 1 4 10 14 15 17 17 23 solution: YES

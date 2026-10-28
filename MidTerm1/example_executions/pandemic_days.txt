@@ -5,7 +5,7 @@ In the commands below, python denotes this interpreter.
 === pandemic_days ===
 Working directory: .
 Command: python -B pandemic.py inputs/pandemic_input1.txt --show-days
-Exit status: 0; elapsed: 0.1274 seconds; expected result: PASS
+Exit status: 0; elapsed: 0.1141 seconds; expected result: PASS
 Program output:
 Day 1
 . . . . .
