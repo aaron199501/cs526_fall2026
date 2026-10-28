@@ -22,6 +22,10 @@ folder also includes snowfall input 5 and puzzle inputs 3-4.
 | `pandemic.py` | Problem 2: Pandemic (35 points) |
 | `puzzle_game.py` | Problem 3: Symbol Puzzle Game (30 points) |
 | `inputs/` | All eleven original input files, unchanged |
+| `tests/test_midterm.py` | 27 automated tests, including 950 deterministic random cases |
+| `tests/run_examples.py` | Runs demonstrations and reports actual commands and output |
+| `tests/input_sha256.json` | SHA-256 hashes of the eleven supplied inputs |
+| `tests/screenshot_sha256.json` | SHA-256 hashes of the twelve current screenshots |
 | `example_executions/` | Saved commands and actual execution output |
 | `screenshot/` | Twelve VS Code integrated terminal screenshots |
 
@@ -205,6 +209,28 @@ To display the synchronous daily infection states:
 
 ```sh
 python -B pandemic.py inputs/pandemic_input1.txt --show-days
+```
+
+### Automated verification
+
+```sh
+python -B -m unittest discover -s tests -v
+python -B tests/run_examples.py all
+```
+
+The 27 tests check all original inputs, exact output messages, filename and
+standard input, snowfall boundaries, synchronous infection updates, and puzzle
+row, column, sub-board, and symbol rules. They include 950 deterministic random
+cases checked against independent reference algorithms. The saved
+[test execution](example_executions/tests.txt) records an actual test run.
+
+To reproduce an individual recorded demonstration:
+
+```sh
+python -B tests/run_examples.py snowfall_1
+python -B tests/run_examples.py pandemic_2
+python -B tests/run_examples.py puzzle_4
+python -B tests/run_examples.py pandemic_days
 ```
 
 ## Example executions
