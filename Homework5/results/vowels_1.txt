@@ -1,0 +1,5 @@
+> python vowelCombinations.py inputs/vowel_input1.txt
+File Input: vowel_input1.txt
+The Number of Vowel combinations is:
+    6
+Exit code: 0; elapsed: 0.094 s

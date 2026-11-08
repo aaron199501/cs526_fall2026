@@ -1,0 +1,4 @@
+> python longestSequence.py inputs/longest_seq1.txt
+File Input: longest_seq1.txt
+Longest Sequence: 4
+Exit code: 0; elapsed: 0.097 s

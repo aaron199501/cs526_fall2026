@@ -1,0 +1,4 @@
+> python longestSequence.py inputs/longest_seq5.txt
+File Input: longest_seq5.txt
+Longest Sequence: 192
+Exit code: 0; elapsed: 0.128 s

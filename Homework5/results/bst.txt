@@ -1,0 +1,47 @@
+> python binarySearchTree.py --size 5 --seed 526
+Problem 1: Binary Search Tree
+Random seed: 526
+Input set (in insertion order): [158, 219, 190, 58, 303]
+Initial tree (indentation = depth; L/R = left/right child):
+ROOT: 158
+  L: 58
+  R: 219
+    L: 190
+    R: 303
+
+Add Node(394): added
+ROOT: 158
+  L: 58
+  R: 219
+    L: 190
+    R: 303
+      R: 394
+
+Add Node(783): added
+ROOT: 158
+  L: 58
+  R: 219
+    L: 190
+    R: 303
+      R: 394
+        R: 783
+
+Delete Node(58): deleted
+ROOT: 158
+  R: 219
+    L: 190
+    R: 303
+      R: 394
+        R: 783
+
+Delete Node(303): deleted
+ROOT: 158
+  R: 219
+    L: 190
+    R: 394
+      R: 783
+
+FindNode(394): found
+
+FindNode(417): not found
+Exit code: 0; elapsed: 0.095 s
