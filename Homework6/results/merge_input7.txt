@@ -1,0 +1,10 @@
+Program: python mergeLogs.py
+Standard input: inputs/merge_input7.txt
+
+Registers: 7
+Total sales: 14
+Merged log: [(1, 4), (2, 4), (3, 4), (4, 4), (5, 4), (6, 4), (7, 4), (8, 4), (9, 4), (10, 4), (50, 2), (50, 6), (55, 6), (60, 4)]
+
+Exit code: 0
+Expected result: PASS
+Elapsed seconds: 0.187878

@@ -1,0 +1,42 @@
+CS526 Homework Assignment 6
+Interpreter: 3.12.14
+
+MERGE supplied examples (8)
+PASS merge_input1.txt     0.254 s
+PASS merge_input2.txt     0.207 s
+PASS merge_input3.txt     0.200 s
+PASS merge_input5.txt     0.187 s
+PASS merge_input6.txt     0.198 s
+PASS merge_input7.txt     0.188 s
+PASS merge_input8.txt     0.217 s
+PASS merge_input9.txt     0.265 s
+8/8 expected results matched.
+
+HEAP supplied examples (10)
+PASS heap_input1.txt      0.164 s
+PASS heap_input2.txt      0.238 s
+PASS heap_input3.txt      0.173 s
+PASS heap_input4.txt      0.186 s
+PASS heap_input5.txt      0.165 s
+PASS heap_input6.txt      0.179 s
+PASS heap_input7.txt      0.165 s
+PASS heap_input8.txt      0.202 s
+PASS heap_input9.txt      0.186 s
+PASS heap_input10.txt     0.196 s
+10/10 expected results matched.
+
+MEDIAN supplied examples (11)
+PASS median_input1.txt    0.199 s
+PASS median_input2.txt    0.198 s
+PASS median_input3.txt    0.198 s
+PASS median_input4.txt    0.191 s
+PASS median_input5.txt    0.192 s
+PASS median_input6.txt    0.202 s
+PASS median_input7.txt    0.214 s
+PASS median_input8.txt    0.197 s
+PASS median_input9.txt    0.194 s
+PASS median_input10.txt   0.191 s
+PASS median_input11.txt   0.334 s
+11/11 expected results matched.
+
+Overall: PASS

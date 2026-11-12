@@ -1,0 +1,62 @@
+CS526 Homework Assignment 6
+Actual supplied-resource verification runs
+
+CS526 Homework Assignment 6
+Interpreter: 3.12.14
+
+MERGE supplied examples (8)
+PASS merge_input1.txt     0.159 s
+PASS merge_input2.txt     0.157 s
+PASS merge_input3.txt     0.149 s
+PASS merge_input5.txt     0.148 s
+PASS merge_input6.txt     0.151 s
+PASS merge_input7.txt     0.152 s
+PASS merge_input8.txt     0.154 s
+PASS merge_input9.txt     0.196 s
+8/8 expected results matched.
+
+Overall: PASS
+
+CS526 Homework Assignment 6
+Interpreter: 3.12.14
+
+HEAP supplied examples (10)
+PASS heap_input1.txt      0.136 s
+PASS heap_input2.txt      0.127 s
+PASS heap_input3.txt      0.165 s
+PASS heap_input4.txt      0.136 s
+PASS heap_input5.txt      0.138 s
+PASS heap_input6.txt      0.142 s
+PASS heap_input7.txt      0.141 s
+PASS heap_input8.txt      0.142 s
+PASS heap_input9.txt      0.141 s
+PASS heap_input10.txt     0.153 s
+10/10 expected results matched.
+
+Overall: PASS
+
+CS526 Homework Assignment 6
+Interpreter: 3.12.14
+
+MEDIAN supplied examples (11)
+PASS median_input1.txt    0.158 s
+PASS median_input2.txt    0.154 s
+PASS median_input3.txt    0.149 s
+PASS median_input4.txt    0.157 s
+PASS median_input5.txt    0.152 s
+PASS median_input6.txt    0.154 s
+PASS median_input7.txt    0.154 s
+PASS median_input8.txt    0.151 s
+PASS median_input9.txt    0.154 s
+PASS median_input10.txt   0.155 s
+PASS median_input11.txt   0.228 s
+11/11 expected results matched.
+
+Overall: PASS
+
+Automated tests: 59 passed (see tests.txt).
+Supplied input/output pairs: 29 passed.
+All execution exit codes: 0.
+
+Original inputs and expected outputs are preserved unchanged.
+Missing in original resources: merge_input4.txt and heap_input11.txt.

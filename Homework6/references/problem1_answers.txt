@@ -1,0 +1,9 @@
+1-1: 4 registers, 8 sales, first (1, 2), last (25, 2)
+1-2: 1 registers, 6 sales, first (2, 1), last (64, 1)
+1-3: 3 registers, 0 sales, first none, last none
+1-4: 0 registers, 0 sales, first none, last none
+1-5: 4 registers, 10 sales, first (7, 1), last (7, 4)
+1-6: 3 registers, 9 sales, first (100, 3), last (320, 1)
+1-7: 7 registers, 14 sales, first (1, 4), last (60, 4)
+1-8: 10 registers, 108 sales, first (3, 9), last (500, 7)
+1-9: 50 registers, 20737 sales, first (1, 25), last (28799, 31)

@@ -1,0 +1,51 @@
+Input values: [7, 7, 7, 7, 7, 7, 7, 7]
+
+After insert(7):
+  7
+
+After insert(7):
+    7
+   /
+  7
+
+After insert(7):
+    7
+   / \
+  7   7
+
+After insert(7):
+        7
+      /   \
+    7       7
+   /
+  7
+
+After insert(7):
+        7
+      /   \
+    7       7
+   / \
+  7   7
+
+After insert(7):
+        7
+      /   \
+    7       7
+   / \     /
+  7   7   7
+
+After insert(7):
+        7
+      /   \
+    7       7
+   / \     / \
+  7   7   7   7
+
+After insert(7):
+                7
+            /       \
+        7               7
+      /   \           /   \
+    7       7       7       7
+   /
+  7

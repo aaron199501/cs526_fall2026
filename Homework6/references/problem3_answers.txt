@@ -1,0 +1,11 @@
+3-1: 5 sales, final median 5.0
+3-2: 0 sales, final median none
+3-3: 1 sales, final median 42.0
+3-4: 2 sales, final median 17.5
+3-5: 12 sales, final median 7.0
+3-6: 20 sales, final median 105.0
+3-7: 20 sales, final median 105.0
+3-8: 12 sales, final median 500.5
+3-9: 40 sales, final median 3.0
+3-10: 100 sales, final median 540.0
+3-11: 20000 sales, final median 502.0

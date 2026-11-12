@@ -1,0 +1,10 @@
+Program: python mergeLogs.py
+Standard input: inputs/merge_input3.txt
+
+Registers: 3
+Total sales: 0
+Merged log: []
+
+Exit code: 0
+Expected result: PASS
+Elapsed seconds: 0.200318

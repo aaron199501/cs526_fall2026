@@ -1,0 +1,11 @@
+2-1: 4 values, 3 levels, root 1
+2-2: 0 values, 0 levels, root none
+2-3: 1 values, 1 levels, root 42
+2-4: 15 values, 4 levels, root 10
+2-5: 15 values, 4 levels, root 10
+2-6: 8 values, 4 levels, root 7
+2-7: 9 values, 4 levels, root 1
+2-8: 8 values, 4 levels, root -9
+2-9: 30 values, 5 levels, root 37
+2-10: 100 values, 7 levels, root 2
+2-11: 10 values, 4 levels, root 4

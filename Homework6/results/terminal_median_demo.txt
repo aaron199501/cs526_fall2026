@@ -1,0 +1,12 @@
+CS526 Homework Assignment 6
+Interpreter: 3.12.14
+Program: python runningMedian.py
+Standard input: inputs/median_input1.txt
+
+[5.0, 10.0, 5.0, 4.5, 5.0]
+
+Exit code: 0
+Expected result: PASS
+Elapsed seconds: 0.229630
+
+Overall: PASS

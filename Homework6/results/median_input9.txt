@@ -1,0 +1,8 @@
+Program: python runningMedian.py
+Standard input: inputs/median_input9.txt
+
+[2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.5, 3.0, 2.5, 2.0, 2.5, 2.0, 2.5, 2.0, 2.5, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0]
+
+Exit code: 0
+Expected result: PASS
+Elapsed seconds: 0.193643

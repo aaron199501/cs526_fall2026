@@ -1,0 +1,8 @@
+Program: python linkedHeap.py
+Standard input: inputs/heap_input2.txt
+
+Input values: []
+
+Exit code: 0
+Expected result: PASS
+Elapsed seconds: 0.238453

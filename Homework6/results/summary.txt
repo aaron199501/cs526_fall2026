@@ -1,0 +1,25 @@
+CS526 Homework Assignment 6
+Verification summary from actual execution records
+
+Interpreter: Python 3.12.14
+Input interface checked: standard input
+
+MERGE : 8/8 supplied cases PASS
+HEAP  : 10/10 supplied cases PASS
+MEDIAN: 11/11 supplied cases PASS
+
+Automated tests: 59/59 PASS
+All 29 supplied input/output pairs PASS
+All program exit codes: 0
+
+Large merge: 50 registers, 20,737 sales
+Large median: 20,000 sales
+
+Linked-node heap; all 9 required methods tested
+Queue capacity and per-register limit checked
+Median balance and partition checked after each sale
+heap_sort preserves original nodes and links
+
+Original resource files are unchanged.
+Original resources omit merge_input4 and heap_input11.
+Details: verification.txt, tests.txt, and per-input logs.

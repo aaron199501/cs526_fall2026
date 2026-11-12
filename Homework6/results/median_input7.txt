@@ -1,0 +1,8 @@
+Program: python runningMedian.py
+Standard input: inputs/median_input7.txt
+
+[200.0, 195.0, 190.0, 185.0, 180.0, 175.0, 170.0, 165.0, 160.0, 155.0, 150.0, 145.0, 140.0, 135.0, 130.0, 125.0, 120.0, 115.0, 110.0, 105.0]
+
+Exit code: 0
+Expected result: PASS
+Elapsed seconds: 0.214041

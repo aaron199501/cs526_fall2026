@@ -1,0 +1,101 @@
+CS526 Homework Assignment 6
+Interpreter: 3.12.14
+
+python -m unittest discover -s tests -v
+test_assignment_insert_example_and_peek_does_not_mutate (test_homework6.HeapTests.test_assignment_insert_example_and_peek_does_not_mutate) ... ok
+test_build_handles_empty_singleton_duplicates_and_negatives (test_homework6.HeapTests.test_build_handles_empty_singleton_duplicates_and_negatives) ... ok
+test_delete_removes_only_one_duplicate (test_homework6.HeapTests.test_delete_removes_only_one_duplicate) ... ok
+test_delete_replacement_must_sift_down (test_homework6.HeapTests.test_delete_replacement_must_sift_down) ... ok
+test_delete_replacement_must_sift_up (test_homework6.HeapTests.test_delete_replacement_must_sift_up) ... ok
+test_delete_root_and_last_and_single_node (test_homework6.HeapTests.test_delete_root_and_last_and_single_node) ... ok
+test_empty_heap_contract (test_homework6.HeapTests.test_empty_heap_contract) ... ok
+test_equal_insert_keeps_values_at_original_positions (test_homework6.HeapTests.test_equal_insert_keeps_values_at_original_positions) ... ok
+test_extract_min_preserves_invariants_until_empty (test_homework6.HeapTests.test_extract_min_preserves_invariants_until_empty) ... ok
+test_heap_sort_preserves_entire_linked_tree (test_homework6.HeapTests.test_heap_sort_preserves_entire_linked_tree) ... ok
+test_insert_across_complete_tree_level_boundaries (test_homework6.HeapTests.test_insert_across_complete_tree_level_boundaries) ... ok
+test_print_heap_draws_assignment_tree_without_mutation (test_homework6.HeapTests.test_print_heap_draws_assignment_tree_without_mutation) ... ok
+test_random_mixed_operations_against_multiset (test_homework6.HeapTests.test_random_mixed_operations_against_multiset) ... ok
+test_instructor_heap_input1 (test_homework6.InstructorResourceTests.test_instructor_heap_input1)
+Instructor case heap_input1.txt ... ok
+test_instructor_heap_input10 (test_homework6.InstructorResourceTests.test_instructor_heap_input10)
+Instructor case heap_input10.txt ... ok
+test_instructor_heap_input2 (test_homework6.InstructorResourceTests.test_instructor_heap_input2)
+Instructor case heap_input2.txt ... ok
+test_instructor_heap_input3 (test_homework6.InstructorResourceTests.test_instructor_heap_input3)
+Instructor case heap_input3.txt ... ok
+test_instructor_heap_input4 (test_homework6.InstructorResourceTests.test_instructor_heap_input4)
+Instructor case heap_input4.txt ... ok
+test_instructor_heap_input5 (test_homework6.InstructorResourceTests.test_instructor_heap_input5)
+Instructor case heap_input5.txt ... ok
+test_instructor_heap_input6 (test_homework6.InstructorResourceTests.test_instructor_heap_input6)
+Instructor case heap_input6.txt ... ok
+test_instructor_heap_input7 (test_homework6.InstructorResourceTests.test_instructor_heap_input7)
+Instructor case heap_input7.txt ... ok
+test_instructor_heap_input8 (test_homework6.InstructorResourceTests.test_instructor_heap_input8)
+Instructor case heap_input8.txt ... ok
+test_instructor_heap_input9 (test_homework6.InstructorResourceTests.test_instructor_heap_input9)
+Instructor case heap_input9.txt ... ok
+test_instructor_median_input1 (test_homework6.InstructorResourceTests.test_instructor_median_input1)
+Instructor case median_input1.txt ... ok
+test_instructor_median_input10 (test_homework6.InstructorResourceTests.test_instructor_median_input10)
+Instructor case median_input10.txt ... ok
+test_instructor_median_input11 (test_homework6.InstructorResourceTests.test_instructor_median_input11)
+Instructor case median_input11.txt ... ok
+test_instructor_median_input2 (test_homework6.InstructorResourceTests.test_instructor_median_input2)
+Instructor case median_input2.txt ... ok
+test_instructor_median_input3 (test_homework6.InstructorResourceTests.test_instructor_median_input3)
+Instructor case median_input3.txt ... ok
+test_instructor_median_input4 (test_homework6.InstructorResourceTests.test_instructor_median_input4)
+Instructor case median_input4.txt ... ok
+test_instructor_median_input5 (test_homework6.InstructorResourceTests.test_instructor_median_input5)
+Instructor case median_input5.txt ... ok
+test_instructor_median_input6 (test_homework6.InstructorResourceTests.test_instructor_median_input6)
+Instructor case median_input6.txt ... ok
+test_instructor_median_input7 (test_homework6.InstructorResourceTests.test_instructor_median_input7)
+Instructor case median_input7.txt ... ok
+test_instructor_median_input8 (test_homework6.InstructorResourceTests.test_instructor_median_input8)
+Instructor case median_input8.txt ... ok
+test_instructor_median_input9 (test_homework6.InstructorResourceTests.test_instructor_median_input9)
+Instructor case median_input9.txt ... ok
+test_instructor_merge_input1 (test_homework6.InstructorResourceTests.test_instructor_merge_input1)
+Instructor case merge_input1.txt ... ok
+test_instructor_merge_input2 (test_homework6.InstructorResourceTests.test_instructor_merge_input2)
+Instructor case merge_input2.txt ... ok
+test_instructor_merge_input3 (test_homework6.InstructorResourceTests.test_instructor_merge_input3)
+Instructor case merge_input3.txt ... ok
+test_instructor_merge_input5 (test_homework6.InstructorResourceTests.test_instructor_merge_input5)
+Instructor case merge_input5.txt ... ok
+test_instructor_merge_input6 (test_homework6.InstructorResourceTests.test_instructor_merge_input6)
+Instructor case merge_input6.txt ... ok
+test_instructor_merge_input7 (test_homework6.InstructorResourceTests.test_instructor_merge_input7)
+Instructor case merge_input7.txt ... ok
+test_instructor_merge_input8 (test_homework6.InstructorResourceTests.test_instructor_merge_input8)
+Instructor case merge_input8.txt ... ok
+test_instructor_merge_input9 (test_homework6.InstructorResourceTests.test_instructor_merge_input9)
+Instructor case merge_input9.txt ... ok
+test_alternating_extremes (test_homework6.MedianTests.test_alternating_extremes) ... ok
+test_assignment_example (test_homework6.MedianTests.test_assignment_example) ... ok
+test_duplicates (test_homework6.MedianTests.test_duplicates) ... ok
+test_empty_and_singleton (test_homework6.MedianTests.test_empty_and_singleton) ... ok
+test_increasing_and_decreasing_streams (test_homework6.MedianTests.test_increasing_and_decreasing_streams) ... ok
+test_input_values_are_not_mutated (test_homework6.MedianTests.test_input_values_are_not_mutated) ... ok
+test_negative_values_and_half_integer_medians (test_homework6.MedianTests.test_negative_values_and_half_integer_medians) ... ok
+test_random_streams (test_homework6.MedianTests.test_random_streams) ... ok
+test_stream_preserves_balance_partition_and_linked_heap_invariants (test_homework6.MedianTests.test_stream_preserves_balance_partition_and_linked_heap_invariants) ... ok
+test_assignment_example (test_homework6.MergeTests.test_assignment_example) ... ok
+test_empty_logs_preserve_original_register_numbers (test_homework6.MergeTests.test_empty_logs_preserve_original_register_numbers) ... ok
+test_input_logs_are_not_mutated (test_homework6.MergeTests.test_input_logs_are_not_mutated) ... ok
+test_live_queue_has_at_most_one_entry_per_register (test_homework6.MergeTests.test_live_queue_has_at_most_one_entry_per_register) ... ok
+test_random_sorted_logs (test_homework6.MergeTests.test_random_sorted_logs) ... ok
+test_single_register_and_uneven_lengths (test_homework6.MergeTests.test_single_register_and_uneven_lengths) ... ok
+test_ties_use_register_number_and_keep_all_duplicates (test_homework6.MergeTests.test_ties_use_register_number_and_keep_all_duplicates) ... ok
+test_zero_registers_and_all_empty_logs (test_homework6.MergeTests.test_zero_registers_and_all_empty_logs) ... ok
+
+----------------------------------------------------------------------
+Ran 59 tests in 6.781s
+
+OK
+
+Exit code: 0
+
+Overall: PASS

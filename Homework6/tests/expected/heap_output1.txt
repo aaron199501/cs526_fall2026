@@ -1,0 +1,21 @@
+Input values: [8, 3, 5, 1]
+
+After insert(8):
+  8
+
+After insert(3):
+    3
+   /
+  8
+
+After insert(5):
+    3
+   / \
+  8   5
+
+After insert(1):
+        1
+      /   \
+    3       5
+   /
+  8
