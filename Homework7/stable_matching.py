@@ -127,7 +127,7 @@ def main(argv=None):
     parser.add_argument("input_file", help="file containing n and complete preference lists")
     parser.add_argument(
         "--allow-shared-names", action="store_true",
-        help="allow the supplied legacy files to reuse a name across the two groups",
+        help="allow a name in both groups; names within each group must remain unique",
     )
     args = parser.parse_args(argv)
     try:

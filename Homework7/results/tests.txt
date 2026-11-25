@@ -11,6 +11,6 @@ test_input_errors_are_descriptive_without_traceback (test_homework7.SortingTests
 test_radix_zero_duplicates_and_digit_boundaries (test_homework7.SortingTests.test_radix_zero_duplicates_and_digit_boundaries) ... ok
 
 ----------------------------------------------------------------------
-Ran 11 tests in 2.916s
+Ran 11 tests in 2.840s
 
 OK

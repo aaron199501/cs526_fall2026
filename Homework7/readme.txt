@@ -147,8 +147,9 @@ Important discrepancy in the supplied files:
 The assignment says every person's name is different across the entire
 file. However, marriage_hundred.txt uses Leslie in both groups, and
 marraige_thousand.txt has 80 names shared across the two groups. These
-supplied input files are retained unchanged. The default strict mode
-rejects them because they violate the written uniqueness requirement.
+files have unique names within each group and complete preference lists.
+The supplied input files are retained unchanged. The default strict mode
+rejects their cross-group shared names under the written uniqueness rule.
 
 To execute those two supplied cases, the explicit --allow-shared-names
 option treats a person's identity as their group and name. It permits
@@ -156,6 +157,27 @@ cross-group shared names only; it still rejects duplicate person names
 within either group and still validates every complete preference list.
 This option is a compatibility exception to the document's global-name
 rule, rather than a change to the default validation or to the input files.
+The option must be supplied explicitly. There is no automatic fallback
+based on a filename or a validation error. It can be used with any input
+filename; the person's group is determined by the file's men/women sections.
+Both modes still require a positive n, exactly 2n person lines, unique
+person names within each group, and complete opposite-group preference
+lists with each name appearing exactly once. The matching algorithm and
+the output format are the same in both modes.
+
+To verify the written global-name rule, run without the option:
+  python stable_matching.py inputs/marriage_hundred.txt
+  python stable_matching.py inputs/marraige_thousand.txt
+Each command is expected to print an explanatory Error about a name in
+both groups and exit with code 1, without a traceback or a matching.
+
+To reproduce the supplied reference answers, use the explicit option in
+the commands below. The 100- and 1000-person cases then exit with code 0
+and print all 100 and 1000 couples, respectively, in women's input order.
+Their complete matchings agree with the supplied answer files. Globally
+unique valid inputs produce the same matching in either mode. This
+distinction documents the conflict between the written input rule and
+the supplied files; it does not assume that the input rule was waived.
 
 Exact commands for all four supplied files:
   python stable_matching.py inputs/marraige_ten.txt
