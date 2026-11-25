@@ -4,6 +4,7 @@ import argparse
 from collections import deque
 from dataclasses import dataclass
 from pathlib import Path
+import re
 import sys
 
 
@@ -47,8 +48,11 @@ def parse_preferences(text, allow_shared_names=False):
     lines = [line for line in text.splitlines() if line.strip()]
     if not lines:
         raise ValueError("The file is empty; the first non-blank line must be n.")
+    count_text = lines[0].strip()
+    if re.fullmatch(r"[+-]?\d+", count_text) is None:
+        raise ValueError("The first non-blank line must be a positive integer n written without separators.")
     try:
-        count = int(lines[0].strip())
+        count = int(count_text)
     except ValueError:
         raise ValueError("The first non-blank line must be a positive integer n.") from None
     if count <= 0:

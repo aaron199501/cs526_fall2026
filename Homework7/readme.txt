@@ -136,6 +136,8 @@ person lines describe the men; the next n describe the women. Each line
 contains the person's single-word name followed by all n opposite-group
 names in preference order, most preferred first. Names are case sensitive.
 Blank lines are ignored.
+Write n as a positive decimal integer. A leading plus sign and leading
+zeros are allowed. An underscore makes the count invalid.
 
 By default, the program enforces the assignment's globally unique names.
 It also checks that there are exactly 2n person lines, that each list has
@@ -177,8 +179,8 @@ Each command is expected to print an explanatory Error about a name in
 both groups and exit with code 1, without a traceback or a matching.
 
 To reproduce the supplied reference answers, use the explicit option in
-the commands below. The 100- and 1000-person cases then exit with code 0
-and print all 100 and 1000 couples, respectively, in women's input order.
+the commands below. Both runs exit with code 0 and print every couple in
+women's input order, yielding 100 and 1000 pairs respectively.
 Their complete matchings agree with the supplied answer files. Globally
 unique valid inputs produce the same matching in either mode. This
 distinction documents the conflict between the written input rule and
@@ -199,7 +201,7 @@ one <man> <woman> pair per line. Couples are listed in the same order that
 the women appear in the input, not in men's order or alphabetical order.
 The large cases still produce every input line and every couple.
 
-For the 100- and 1000-person cases, output may be redirected to files:
+The following commands save the output for the 100-pair and 1000-pair cases.
   python stable_matching.py inputs/marriage_hundred.txt --allow-shared-names > results/matching_hundred.txt
   python stable_matching.py inputs/marraige_thousand.txt --allow-shared-names > results/matching_thousand.txt
 

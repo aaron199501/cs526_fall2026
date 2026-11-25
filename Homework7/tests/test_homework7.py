@@ -214,6 +214,27 @@ class MatchingTests(unittest.TestCase):
         self.assertEqual(gale_shapley(parse_preferences("1\nAlex alex\nalex Alex\n")),
                          [("Alex", "alex")])
 
+        # Keep the person rows valid so only the count format can cause the error.
+        ten_pairs = (ROOT / "inputs" / "marraige_ten.txt").read_text(encoding="utf-8-sig")
+        ten_pair_rows = ten_pairs.split("\n", 1)[1]
+        one_pair_rows = "A B\nB A\n"
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "count.txt"
+            for header, rows in (("1_0", ten_pair_rows), ("0_1", one_pair_rows)):
+                path.write_text(header + "\n" + rows, encoding="utf-8-sig")
+                for options in ((), ("--allow-shared-names",)):
+                    with self.subTest(header=header, options=options):
+                        result = run_program("stable_matching.py", path, *options)
+                        self.assertEqual(result.returncode, 1)
+                        self.assertEqual(result.stdout, "")
+                        self.assertIn("positive integer n", result.stderr)
+                        self.assertNotIn("Traceback", result.stderr)
+
+        for header in ("+01", " \t+01 \t", "\u0661", "\uff11"):
+            with self.subTest(valid_header=header):
+                pairs = gale_shapley(parse_preferences(header + "\n" + one_pair_rows))
+                self.assertEqual(pairs, [("A", "B")])
+
     def test_supplied_badinput_reports_23_person_lines(self):
         path = ROOT / "inputs" / "badInput.txt"
         text = path.read_text(encoding="utf-8-sig")
