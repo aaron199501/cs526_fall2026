@@ -1,0 +1,114 @@
+[
+  {
+    "case": "merge_small",
+    "command": "python merge_sort.py inputs/small.txt",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "output": "results/merge_small.txt"
+  },
+  {
+    "case": "merge_medium",
+    "command": "python merge_sort.py inputs/medium.txt",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "output": "results/merge_medium.txt"
+  },
+  {
+    "case": "merge_large",
+    "command": "python merge_sort.py inputs/large.txt",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "output": "results/merge_large.txt"
+  },
+  {
+    "case": "quick_small",
+    "command": "python quick_sort.py inputs/small.txt",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "output": "results/quick_small.txt"
+  },
+  {
+    "case": "quick_medium",
+    "command": "python quick_sort.py inputs/medium.txt",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "output": "results/quick_medium.txt"
+  },
+  {
+    "case": "quick_large",
+    "command": "python quick_sort.py inputs/large.txt",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "output": "results/quick_large.txt"
+  },
+  {
+    "case": "insertion_small",
+    "command": "python insertion_sort.py inputs/small.txt",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "output": "results/insertion_small.txt"
+  },
+  {
+    "case": "insertion_medium",
+    "command": "python insertion_sort.py inputs/medium.txt",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "output": "results/insertion_medium.txt"
+  },
+  {
+    "case": "insertion_large",
+    "command": "python insertion_sort.py inputs/large.txt",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "output": "results/insertion_large.txt"
+  },
+  {
+    "case": "radix_small",
+    "command": "python radix_sort.py inputs/radix_small.txt",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "output": "results/radix_small.txt"
+  },
+  {
+    "case": "radix_medium",
+    "command": "python radix_sort.py inputs/radix_medium.txt",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "output": "results/radix_medium.txt"
+  },
+  {
+    "case": "radix_large",
+    "command": "python radix_sort.py inputs/radix_large.txt",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "output": "results/radix_large.txt"
+  },
+  {
+    "case": "matching_ten",
+    "command": "python stable_matching.py inputs/marraige_ten.txt",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "output": "results/matching_ten.txt"
+  },
+  {
+    "case": "matching_hundred",
+    "command": "python stable_matching.py inputs/marriage_hundred.txt --allow-shared-names",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "output": "results/matching_hundred.txt"
+  },
+  {
+    "case": "matching_thousand",
+    "command": "python stable_matching.py inputs/marraige_thousand.txt --allow-shared-names",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "output": "results/matching_thousand.txt"
+  },
+  {
+    "case": "matching_invalid",
+    "command": "python stable_matching.py inputs/badInput.txt",
+    "exit_code": 1,
+    "expected_exit_code": 1,
+    "output": "results/matching_invalid.txt"
+  }
+]

@@ -1,0 +1,16 @@
+test_cli_echoes_input_and_every_supplied_pair (test_homework7.MatchingTests.test_cli_echoes_input_and_every_supplied_pair) ... ok
+test_invalid_inputs_and_blank_lines (test_homework7.MatchingTests.test_invalid_inputs_and_blank_lines) ... ok
+test_legacy_shared_names_require_explicit_option (test_homework7.MatchingTests.test_legacy_shared_names_require_explicit_option) ... ok
+test_men_optimal_against_all_small_matchings (test_homework7.MatchingTests.test_men_optimal_against_all_small_matchings) ... ok
+test_supplied_answers_female_order_and_no_blocking_pair (test_homework7.MatchingTests.test_supplied_answers_female_order_and_no_blocking_pair) ... ok
+test_supplied_badinput_reports_23_person_lines (test_homework7.MatchingTests.test_supplied_badinput_reports_23_person_lines) ... ok
+test_cli_prints_all_500_input_and_sorted_values (test_homework7.SortingTests.test_cli_prints_all_500_input_and_sorted_values) ... ok
+test_comparison_sorts_against_oracle_without_mutation (test_homework7.SortingTests.test_comparison_sorts_against_oracle_without_mutation) ... ok
+test_custom_input_sizes_and_required_content (test_homework7.SortingTests.test_custom_input_sizes_and_required_content) ... ok
+test_input_errors_are_descriptive_without_traceback (test_homework7.SortingTests.test_input_errors_are_descriptive_without_traceback) ... ok
+test_radix_zero_duplicates_and_digit_boundaries (test_homework7.SortingTests.test_radix_zero_duplicates_and_digit_boundaries) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 2.001s
+
+OK
