@@ -143,13 +143,18 @@ exactly n entries, and that those entries name every opposite-group person
 exactly once. Invalid input produces an explanatory error and exit code 1,
 without a Python traceback. Missing or unreadable files are also reported.
 
-Important discrepancy in the supplied files:
-The assignment says every person's name is different across the entire
-file. However, marriage_hundred.txt uses Leslie in both groups, and
-marraige_thousand.txt has 80 names shared across the two groups. These
-files have unique names within each group and complete preference lists.
-The supplied input files are retained unchanged. The default strict mode
-rejects their cross-group shared names under the written uniqueness rule.
+Submission note on shared names
+Problem 3 requires each person's name to be unique across both groups.
+In the supplied files, the men's and women's lists share one name (Leslie)
+for n = 100 and 80 names for n = 1,000. The default mode therefore rejects
+both files. The --allow-shared-names option allows a name to appear once
+in each group. To reproduce the reference answers from the unchanged
+inputs, run these commands from the Homework7 directory.
+
+  python stable_matching.py inputs/marriage_hundred.txt --allow-shared-names
+  python stable_matching.py inputs/marraige_thousand.txt --allow-shared-names
+
+Both files have unique names within each group and complete preference lists.
 
 To execute those two supplied cases, the explicit --allow-shared-names
 option treats a person's identity as their group and name. It permits
