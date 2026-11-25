@@ -8,7 +8,7 @@ Python 3 command is python3, replace python with python3.
 The submission uses a Homework7 directory on the main branch.
 
 The five programs read the input filename from the command line and never
-prompt for input. The solution algorithms do not use sort(), sorted(),
+prompt for input. The programs and tests do not use sort(), sorted(),
 heapq, or a library sorting or priority-queue implementation.
 
 Files and directories:
@@ -31,8 +31,11 @@ complete output is retained in results/.
 To run the automated checks:
   python -m unittest discover -s tests -v
 
-The tests may use Python's sorted() as an independent expected-result
-oracle. The five solution programs and their shared input helper do not.
+The sorting tests independently check that adjacent results are in
+non-decreasing order and that the result's Counter multiset equals the
+input's Counter multiset. Together these properties verify the complete
+ordering without using another sorting algorithm as an oracle. They also
+check that the input is unchanged and every value is printed by the CLI.
 
 To repeat all 16 required executions and save their complete outputs:
   python tests/run_examples.py all --preview

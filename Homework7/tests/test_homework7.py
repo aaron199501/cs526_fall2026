@@ -1,4 +1,4 @@
-"""Independent checks; built-in sorted is used only as a test oracle."""
+"""Independent checks using ordering and multiset preservation properties."""
 
 from collections import Counter
 from itertools import permutations
@@ -55,7 +55,13 @@ def is_stable(pairs, male, female):
 
 
 class SortingTests(unittest.TestCase):
-    def test_comparison_sorts_against_oracle_without_mutation(self):
+    def assert_ordered_permutation(self, result, original):
+        """Verify increasing order and preservation of every input occurrence."""
+        self.assertTrue(all(left <= right for left, right in zip(result, result[1:])),
+                        "Result must be in non-decreasing order.")
+        self.assertEqual(Counter(result), Counter(original))
+
+    def test_comparison_sorts_order_and_permutation_without_mutation(self):
         rng = random.Random(5267)
         cases = [[], [4], [3, -2, 3, 0, -2], list(range(100)),
                  list(range(100, -1, -1)), [7] * 100]
@@ -66,7 +72,7 @@ class SortingTests(unittest.TestCase):
                 with self.subTest(algorithm=function.__name__, size=len(values)):
                     before = values.copy()
                     result = function(values)
-                    self.assertEqual(result, sorted(before))
+                    self.assert_ordered_permutation(result, before)
                     self.assertEqual(values, before)
                     self.assertIsNot(result, values)
 
@@ -79,7 +85,7 @@ class SortingTests(unittest.TestCase):
             with self.subTest(values=values[:10], size=len(values)):
                 before = values.copy()
                 result = radix_sort(values)
-                self.assertEqual(result, sorted(before))
+                self.assert_ordered_permutation(result, before)
                 self.assertEqual(values, before)
                 self.assertIsNot(result, values)
         with self.assertRaises(ValueError):
@@ -114,8 +120,7 @@ class SortingTests(unittest.TestCase):
                 printed_input = [int(v) for v in match.group(1).split()]
                 printed_result = [int(v) for v in match.group(2).split()]
                 self.assertEqual(printed_input, values)
-                self.assertEqual(printed_result, sorted(values))
-                self.assertEqual(Counter(printed_result), Counter(values))
+                self.assert_ordered_permutation(printed_result, values)
 
     def test_input_errors_are_descriptive_without_traceback(self):
         with tempfile.TemporaryDirectory() as directory:
